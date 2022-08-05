@@ -1,0 +1,267 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+/*300 400 700 800*/
+
+:root {
+    --mainblue: #009AFF;
+    --sky: #A7D7F1;
+    --yellow: #FFC831;
+    --green: #23E685;
+    --red: #FF8F8F;
+    --blue: #6DC4F1;
+    --mint: #7ED9D9;
+    --purple: #AF81DC;
+    --btnblue: #0FA0E4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 나눔스퀘어, 'NanumSquare', sans-serif;
+    transform: rotate(0.04deg);
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* 헤더 */
+
+.innerHeader {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 1px 9px 1px rgba(0, 0, 0, 0.15);
+}
+
+.logo h1 {
+    width: 140px;
+}
+
+.logo h2 a {
+    display: block;
+    width: 100%;
+}
+
+.logo a img {
+    display: block;
+    width: 100%;
+}
+
+/*  사이드내브   */
+
+.sideNavBtn:checked~.sideNav {
+    left: 0;
+}
+
+.sideNav {
+    z-index: 1111;
+    position: absolute;
+    left: -80%;
+    width: 80%;
+    height: calc(100% - 60px);
+    /* 헤더 높이 아래부터 사이드내브가 시작되어
+     푸터가 들뜨는 문제발생 -> 헤더 높이를 뺴줬음 */
+    background: var(--mainblue);
+    overflow: hidden;
+    transition: all 0.4s;
+    box-shadow: 3px 0 7px rgba(0, 0, 0, 0.15);
+}
+
+.sideNav .sideNavLabel {
+    position: absolute;
+    width: 100%;
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
+    left: 85%;
+}
+
+.sideNav>ul {
+    margin-top: 50px;
+}
+
+.sideNavBtn {
+    display: none;
+}
+
+.sideNav>ul>li {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    font-weight: 700;
+    color: white;
+}
+
+.sideNav a {
+    color: white;
+    display: block;
+}
+
+.sideNav>label>i {
+    margin-right: 20px;
+}
+
+
+
+/*  사이드내브안의리스트~~~~~!!!!!!!  */
+
+.sideNav input[type="checkbox"] {
+    display: none;
+}
+
+.sideNav .hideList {
+    background: white;
+    display: none;
+    color: #222;
+    line-height: 1.6;
+}
+
+.sideNav .hideList a {
+    color: #222;
+}
+
+.introLibOpen:checked~.hideList01 {
+    display: block;
+}
+
+.findBookOpen:checked~.hideList02 {
+    display: block;
+}
+
+.readingChangwon:checked~.hideList03 {
+    display: block;
+}
+
+.myPage:checked~.hideList04 {
+    display: block;
+}
+
+.useHomepage:checked~.hideList05 {
+    display: block;
+}
+
+.libSchedule:checked~.hideList06 {
+    display: block;
+}
+
+
+.login {
+    background: var(--mainblue);
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginForm {
+    margin-bottom: 20px;
+}
+
+
+.loginForm input {
+    padding: 5px 10px;
+    font-size: 18px;
+    border: none;
+    box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.loginForm .loginBtn {
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-weight: 800;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+}
+
+.loginForm .loginBtn:active {
+    box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15);
+}
+
+.loginForm label {
+    display: block;
+    font-weight: 800;
+    color: white;
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.helpLogin {
+    display: flex;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.helpLogin a {
+    display: block;
+    padding: 5px 10px;
+    color: white;
+}
+
+.helpLogin .findID {
+    position: relative;
+}
+
+.helpLogin .findID a::after {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 13px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+.helpLogin .findID a::before {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 13px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+
+
+/* 푸터 */
+
+.footer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+    transform: rotate(-0.03deg);
+}
+
+.footer a {
+    font-weight: 800;
+    font-size: 15px;
+}

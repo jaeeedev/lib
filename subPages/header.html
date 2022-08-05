@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .whole {
+        width: 500px;
+        height: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+      li {
+        list-style: none;
+      }
+
+      .upper ul {
+        display: flex;
+        height: 40px;
+      }
+
+      .lower ul {
+        display: flex;
+        position: absolute;
+        top: 20px;
+      }
+
+      .lower {
+        overflow: hidden;
+      }
+
+      .lower li:hover {
+        color: green;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="whole">
+      <li class="upper">
+        <ul>
+          <li>a</li>
+          <li>a</li>
+          <li>a</li>
+          <li>a</li>
+          <li>a</li>
+        </ul>
+      </li>
+      <li class="lower">
+        <ul>
+          <li>b</li>
+          <li>b</li>
+          <li>b</li>
+          <li>b</li>
+          <li>b</li>
+        </ul>
+      </li>
+    </ul>
+    <script>
+      const upperLi = document.querySelector(".upper");
+      const lower = document.querySelector(".lower");
+      const whole = document.querySelector(".whole");
+
+      upperLi.addEventListener("mouseenter", () => {
+        whole.style.height = "150px";
+      });
+      upperLi.addEventListener("mouseleave", () => {
+        whole.style.height = "20px";
+      });
+      lower.addEventListener("mouseenter", () => {
+        whole.style.height = "150px";
+      });
+      lower.addEventListener("mouseleave", () => {
+        whole.style.height = "20px";
+      });
+    </script>
+  </body>
+</html>

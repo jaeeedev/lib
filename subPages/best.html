@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도서관사업소</title>
+    <script src="https://kit.fontawesome.com/7cde33c3cd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/best.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="innerHeader">
+            <div class="logo">
+                <h1><a href="main.html"><img src="../img/logo_top.png" alt="상단로고"></a></h1>
+            </div>
+            <label for="sideNavBtn" class="sideNavLabel"><i class="fa-solid fa-bars"></i></label>
+        </div>
+    </header>
+    <input type="checkbox" id="sideNavBtn" class="sideNavBtn">
+    <nav class="sideNav">
+        <label for="sideNavBtn" class="sideNavLabel"><i class="fa-solid fa-xmark"></i></label>
+        <ul>
+            <li><a href="login.html">로그인</a></li>
+            <li><label for="introLibOpen">도서관소개 <i class="fa-solid fa-chevron-down"></i></label>
+            </li>
+            <input type="checkbox" id="introLibOpen" class="introLibOpen">
+            <li class="hideList hideList01">
+                <ul>
+                    <li><a href="../fakepages/greeting.html">인사말</a></li>
+                    <li><a href="../fakepages/history.html">연혁</a></li>
+                    <li><a href="https://lib.changwon.go.kr/cl/about/libps.html">도서관현황</a></li>
+                    <li><a href="">도서관 이용예절</a></li>
+                    <li><a href="">의견수렴</a></li>
+                </ul>
+            </li>
+            <li><label for="findBookOpen">자료찾기 <i class="fa-solid fa-chevron-down"></i></label>
+            </li>
+            <input type="checkbox" id="findBookOpen" class="findBookOpen">
+            <li class="hideList hideList02">
+                <ul>
+                    <li><a href="./best.html">도서대출베스트</a></li>
+                    <li>자료검색/예약</li>
+                    <li>신착도서</li>
+                    <li>권장도서</li>
+                </ul>
+            </li>
+            <!-- <li><a href="#!">책읽는창원 <label for="readingChangwon"><i class="fa-solid fa-chevron-down"></i></label></a>
+            </li>
+            <input type="checkbox" id="readingChangwon" class="readingChangwon">
+            <li class="hideList hideList03">
+                <ul>
+                    <li><a href="#!">책읽는 창원소식</a></li>
+                    <li><a href="#!">창원의 책</a></li>
+                    <li><a href="#!">독서릴레이</a></li>
+                    <li><a href="#!">독후감전국공모전</a></li>
+                    <li><a href="#!">책읽는 창원 갤러리</a></li>
+                </ul>
+            </li> -->
+            <li><label for="myPage">마이페이지 <i class="fa-solid fa-chevron-down"></i></label></li>
+            <input type="checkbox" id="myPage" class="myPage">
+            <li class="hideList hideList04">
+                <ul>
+                    <li><a href="./login.html">로그인</a></li>
+                    <li><a href="#!">회원가입</a></li>
+                    <li><a href="#!">아이디찾기</a></li>
+                    <li><a href="#!">비밀번호찾기</a></li>
+                    <li><a href="#!">도서대출내역조회</a></li>
+                    <!-- <li><a href="#!">희망도서신청</a></li> -->
+                    <li><a href="#!">도서예약조회</a></li>
+                    <!-- <li><a href="#!">개인정보 재동의</a></li> -->
+                </ul>
+            </li>
+            <!-- <li><a href="#!">홈페이지 이용안내 <label for="useHomepage"><i class="fa-solid fa-chevron-down"></i></label></a>
+            </li>
+            <input type="checkbox" id="useHomepage" class="useHomepage">
+            <li class="hideList hideList05">
+                <ul>
+                    <li><a href="#!">홈페이지이용안내</a></li>
+                    <li><a href="#!">홈페이지오류신고</a></li>
+                    <li><a href="#!">개인정보처리방침</a></li>
+                    <li><a href="#!">행정서비스헌장</a></li>
+                    <li><a href="#!">저작권보호정책</a></li>
+                    <li><a href="#!">뷰어프로그램</a></li>
+                    <li><a href="#!">사이트맵</a></li>
+                </ul>
+            </li> -->
+            <li><label for="libSchedule">도서관 일정 <i class="fa-solid fa-chevron-down"></i></label></li>
+            <input type="checkbox" id="libSchedule" class="libSchedule">
+            <li class="hideList hideList06">
+                <ul>
+                    <li><a href="#!">창원중앙도서관</a></li>
+                    <li><a href="#!">성산도서관</a></li>
+                    <li><a href="./schedule.html">상남도서관</a></li>
+                    <li><a href="#!">최윤덕도서관</a></li>
+                    <li><a href="#!">고향의봄도서관</a></li>
+                    <li><a href="#!">명곡도서관</a></li>
+                    <li><a href="#!">마산합포도서관</a></li>
+                    <li><a href="#!">마산회원도서관</a></li>
+                    <li><a href="#!">내서도서관</a></li>
+                    <li><a href="#!">중리초등도서관</a></li>
+                    <li><a href="#!">진해도서관</a></li>
+                    <li><a href="#!">동부도서관</a></li>
+                </ul>
+            </li>
+            <!-- <li><a href="#!">작은도서관</a></li> -->
+
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="pageNavi">
+            <h2>도서대출베스트</h2>
+        </div>
+
+        <section class="filter">
+            <div class="libFilter">
+                <div class="allBooks">
+                    <p>전체</p>
+                </div>
+                <div class="onlyHere">
+                    <p>내 도서관만 보기</p>
+                </div>
+            </div>
+            <div class="dateFilter">
+                <form><label class="dateLabel">날짜</label>
+                    <input type="date">
+                    <span>~</span>
+                    <input type="date">
+                    <button type="button">검색</button>
+                </form>
+            </div>
+            <div class="otherFilters">
+                <div class="otherTop">
+                    <select class="libSelect" id="libSelect" name="libSelect">
+                        <option>도서관 전체</option>
+                        <option>중앙</option>
+                        <option>성산</option>
+                        <option selected>상남</option>
+                        <option>최윤덕</option>
+                        <option>고향의봄</option>
+                        <option>명곡</option>
+                        <option>마산합포</option>
+                        <option>마산회원</option>
+                        <option>내서</option>
+                        <option>중리초등</option>
+                        <option>진해</option>
+                        <option>동부</option>
+                    </select>
+                    <select class="roomSelect" id="roomSelect" name="roomSelect">
+                        <option>자료실 전체</option>
+                        <option>[상남]종합자료실</option>
+                        <option>[상남]참고자료실</option>
+                        <option>[상남]어린이자료실</option>
+                        <option>[상남]장애인자료실</option>
+                        <option>[상남]서고실</option>
+                        <option>[상남]연속간행물실</option>
+                        <option>[상남]디지털자료실</option>
+                    </select>
+                </div>
+                <select name="genreSelect" id="genreSelect" class="genreSelect">
+                    <option>장르 전체</option>
+                    <option>000 총류</option>
+                    <option>100 철학</option>
+                    <option>200 종교</option>
+                    <option>300 사회과학</option>
+                    <option>400 자연과학</option>
+                    <option>500 기술과학</option>
+                    <option>600 예술</option>
+                    <option>700 언어</option>
+                    <option>800 문학</option>
+                    <option>900 역사</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="top5">
+            <h2>인기 도서</h2>
+            <ul class="topList">
+                <li>
+                    <div class="topPic">
+                        <span>1</span>
+                        <a href="./bestDetail02.html">
+                            <img src="../img/젊은작가상.jpg" alt="">
+                        </a>
+                    </div>
+                    <h3><a href="./bestDetail02.html">2022 제13회 젊은작가상 수상작품집</h3></a>
+                    <p><a href="./bestDetail02.html">임솔아 외</a></p>
+                </li>
+                <li>
+                    <div class="topPic">
+                        <span>2</span>
+                        <img src="../img/어떻게물리학을.jpg" alt="어떻게물리학을사랑썸네일">
+                    </div>
+                    <h3>어떻게 물리학을 사랑하지 않을 수 있을까?</h3>
+                    <p>짐 알칼릴리 지음</p>
+                </li>
+                <li>
+                    <div class="topPic">
+                        <span>3</span>
+                        <img src="https://image.yes24.com/goods/104688722/XL" alt="">
+                    </div>
+                    <h3>29센티미터</h3>
+                    <p>이상권</p>
+                </li>
+                <li>
+                    <div class="topPic">
+                        <span>4</span>
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/91CJCyNr1xL.jpg" alt="">
+                    </div>
+                    <h3>Grilled cheese and dragons</h3>
+                    <p>Nancy Krulik</p>
+                </li>
+                <li>
+                    <div class="topPic">
+                        <span>5</span>
+                        <img src="http://image.kyobobook.co.kr/images/book/large/006/l9791164384006.jpg" alt="">
+                    </div>
+                    <h3>(코믹 메이플스토리)수학도둑 : 응용편. 82</h3>
+                    <p>송도수</p>
+                </li>
+            </ul>
+        </section>
+        <section class="under5">
+            <ul class="underList">
+                <li>
+                    <div class="underPic">
+                        <span></span>
+                        <a href="./bestDetail.html"><img src="https://image.yes24.com/goods/59382261/XL"
+                                alt="파친코썸네일"></a>
+                    </div>
+                    <div class="underText">
+                        <h3 class="underTitle"><a href="./bestDetail.html">파친코 1 (이민진 장편소설)</a></h3>
+                        <p class="writer">이민진</p>
+                        <p class="company">창비</p>
+                        <p class="wroteYear">2022</p>
+                        <p class="availLib">상남도서관</p>
+                        <div class="underBtns">
+                            <button type="button" class="goToCart">관심도서 담기</button>
+                            <button type="button" class="goToReserve disabled ">예약하기</button>
+                            <button type="button" class="goToDetail"><a href="./bestDetail.html">자세히 <i
+                                        class="fa-solid fa-angle-right"></i></a></button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="underPic">
+                        <span></span>
+                        <img src="../img/잊었던용기.jpg" alt="잊었던용기썸네일">
+                    </div>
+                    <div class="underText">
+                        <h3 class="underTitle">잊었던 용기</h3>
+                        <p class="writer">휘리 지음</p>
+                        <p class="company">창비</p>
+                        <p class="wroteYear">2022</p>
+                        <p class="availLib">상남도서관</p>
+                        <div class="underBtns">
+                            <button type="button" class="goToCart">관심도서 담기</button>
+                            <button type="button" class="goToReserve disabled ">예약하기</button>
+                            <button type="button" class="goToDetail">자세히 <i
+                                    class="fa-solid fa-angle-right"></i></button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="underPic">
+                        <span></span>
+                        <img src="../img/작별인사.jpg" alt="작별인사썸네일">
+                    </div>
+                    <div class="underText">
+                        <h3 class="underTitle">작별인사</h3>
+                        <p class="writer">김영하</p>
+                        <p class="company">복복서가</p>
+                        <p class="wroteYear">2022</p>
+                        <p class="availLib">상남도서관</p>
+                        <div class="underBtns">
+                            <button type="button" class="goToCart">관심도서 담기</button>
+                            <button type="button" class="goToReserve disabled ">예약하기</button>
+                            <button type="button" class="goToDetail">자세히 <i
+                                    class="fa-solid fa-angle-right"></i></button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="underPic">
+                        <span></span>
+                        <img src="../img/눈아이.jpg" alt="코믹메이플스토리썸네일">
+                    </div>
+                    <div class="underText">
+                        <h3 class="underTitle">눈아이 : 안녕달 그림책</h3>
+                        <p class="writer">안녕달</p>
+                        <p class="company">파주 : 창비</p>
+                        <p class="wroteYear">2021</p>
+                        <p class="availLib">상남도서관</p>
+                        <div class="underBtns">
+                            <button type="button" class="goToCart">관심도서 담기</button>
+                            <button type="button" class="goToReserve">예약하기</button>
+                            <button type="button" class="goToDetail"><a href="#!">자세히 <i
+                                        class="fa-solid fa-angle-right"></i></a></button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="underPic">
+                        <span></span>
+                        <img src="../img/눈토끼식당차림표.jpg" alt="눈토끼식당차림표썸네일">
+                    </div>
+                    <div class="underText">
+                        <h3 class="underTitle">눈토끼 식당 차림표. [2], 8월의 불꽃놀이와 딸기 빙수</h3>
+                        <p class="writer">고미나토 유우키</p>
+                        <p class="company">대원씨아이</p>
+                        <p class="wroteYear">2022</p>
+                        <p class="availLib">상남도서관</p>
+                        <div class="underBtns">
+                            <button type="button" class="goToCart">관심도서 담기</button>
+                            <button type="button" class="goToReserve">예약하기</button>
+                            <button type="button" class="goToDetail"><a href="#!">자세히 <i
+                                        class="fa-solid fa-angle-right"></i></a></button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="underPic">
+                        <span></span>
+                        <img src="../img/지구끝의온실.jpg" alt="지구끝의온실썸네일">
+                    </div>
+                    <div class="underText">
+                        <h3 class="underTitle">지구 끝의 온실</h3>
+                        <p class="writer">김초엽 지음</p>
+                        <p class="company">자이언트북스</p>
+                        <p class="wroteYear">2021</p>
+                        <p class="availLib">상남도서관</p>
+                        <div class="underBtns">
+                            <button type="button" class="goToCart">관심도서 담기</button>
+                            <button type="button" class="goToReserve">예약하기</button>
+                            <button type="button" class="goToDetail"><a href="#!">자세히 <i
+                                        class="fa-solid fa-angle-right"></i></a></button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+
+    <div class="etc">
+        <div class="toCartList">관심도서 목록</div>
+        <div class="toTop"><a href="#header"><i class="fa-solid fa-arrow-up"></i></a></div>
+    </div>
+
+
+    <footer class="footer">
+        <h3><a href="#!">대출조회/반납연기</a></h3>
+        <h3><a href="#!">도서예약조회</a></h3>
+        <h3><a href="#!">전자도서관</a></h3>
+        <h3 class="undo" onclick="history.back()"><a href="javascript:void(0)"><i
+                    class="fa-solid fa-rotate-left"></i></a></h3>
+    </footer>
+
+
+    <script>
+        const underIndex = [...document.querySelectorAll(".underPic>span")];
+        underIndex.map((el, i) => {
+            el.innerHTML = `${i + 6}`
+        })
+    </script>
+</body>
+
+</html>

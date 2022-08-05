@@ -1,0 +1,1759 @@
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+/*300 400 700 800*/
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+:root {
+  --mainblue: #009aff;
+  --sky: #a7d7f1;
+  --yellow: #ffc831;
+  --green: #23e685;
+  --red: #ff8f8f;
+  --blue: #2bc3ff;
+  --mint: #7ed9d9;
+  --purple: #af81dc;
+  --decoblue: #93d2e4;
+  --decoyellow: #ffe749;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "pretendard", "sans-serif";
+  color: #222;
+  background: #f3f3f3;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  padding: 20px;
+}
+
+h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* 헤더 */
+
+.innerHeader {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 1px 9px 1px rgba(0, 0, 0, 0.15);
+}
+
+.logo h1 {
+  width: 140px;
+}
+
+.logo h2 a {
+  display: block;
+  width: 100%;
+}
+
+.logo a img {
+  display: block;
+  width: 100%;
+}
+
+.forPC {
+  display: none;
+}
+
+.forPC .innerHeader {
+  display: none;
+}
+
+/*  사이드내브   */
+
+.sideNavBtn:checked ~ .sideNav {
+  left: 0;
+}
+
+.sideNav {
+  z-index: 1111;
+  position: absolute;
+  left: -80%;
+  width: 80%;
+  height: calc(100% - 60px);
+  /* 헤더 높이 아래부터 사이드내브가 시작되어
+     푸터가 들뜨는 문제발생 -> 헤더 높이를 뺴줬음 */
+  background: var(--mainblue);
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.sideNav .sideNavLabel {
+  position: absolute;
+  width: 100%;
+  color: white;
+  font-size: 30px;
+  margin-top: 20px;
+  left: 85%;
+}
+
+.sideNav > ul {
+  margin-top: 50px;
+}
+
+.sideNavBtn {
+  display: none;
+}
+
+.sideNav > ul > li {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  font-weight: 700;
+  color: white;
+}
+
+.sideNav a {
+  color: white;
+  display: block;
+}
+
+.sideNav > label > i {
+  margin-right: 20px;
+}
+
+/*  사이드내브안의리스트~~~~~!!!!!!!  */
+
+.sideNav input[type="checkbox"] {
+  display: none;
+}
+
+.sideNav .hideList {
+  background: white;
+  display: none;
+  color: #222;
+  line-height: 1.6;
+}
+
+.sideNav .hideList a {
+  color: #222;
+  font-weight: 600;
+}
+
+.introLibOpen:checked ~ .hideList01 {
+  display: block;
+}
+
+.findBookOpen:checked ~ .hideList02 {
+  display: block;
+}
+
+.readingChangwon:checked ~ .hideList03 {
+  display: block;
+}
+
+.myPage:checked ~ .hideList04 {
+  display: block;
+}
+
+.useHomepage:checked ~ .hideList05 {
+  display: block;
+}
+
+.libSchedule:checked ~ .hideList06 {
+  display: block;
+}
+
+/* 현재도서관 */
+
+.currentLib {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.libImg {
+  width: 100%;
+  height: 280px;
+  position: relative;
+}
+
+.libImg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.currentLibInfo {
+  position: absolute;
+  top: 30%;
+  right: 0;
+}
+
+.currentLibInfo h2 {
+  margin: 0 10px 5px 0;
+  color: white;
+}
+
+.currentLibInfo h3 a {
+  background: white;
+  font-size: 16px;
+  padding: 6px 15px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.currentLibInfo h3 a:active {
+  background: var(--mainblue);
+  color: white;
+}
+
+.currentLib .changeLib {
+  position: absolute;
+  bottom: 0;
+  background: var(--mainblue);
+  padding: 10px 15px;
+  font-size: 15px;
+  color: white;
+}
+
+.showSelectLib {
+  display: none;
+}
+
+.showSelectLib:checked ~ .libraryBox {
+  height: 120px;
+}
+
+.libraryBox {
+  overflow: hidden;
+  height: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  transition: all 0.3s;
+  z-index: 11;
+  position: relative;
+  background: white;
+}
+
+.libraryBox div {
+  width: 100%;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.libraryBox .selected {
+  width: 100%;
+  background: var(--sky);
+  text-align: center;
+  font-weight: 800;
+}
+
+/* 메인(서치, 휴관)  */
+
+.main {
+  position: relative;
+  background: #f3f3f3;
+}
+
+.decoBar01 {
+  position: absolute;
+  width: 500px;
+  height: 50px;
+  background: var(--yellow);
+  border-radius: 40px;
+  transform: rotate(-38deg);
+  /* box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15); */
+  left: -300px;
+  top: 170px;
+}
+
+.decoBar02 {
+  position: absolute;
+  width: 500px;
+  height: 65px;
+  background: var(--mainblue);
+  border-radius: 40px;
+  transform: rotate(-38deg);
+  /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); */
+  left: 170px;
+  top: -40px;
+}
+
+.decoBar03 {
+  position: absolute;
+  width: 300px;
+  height: 55px;
+  background: var(--green);
+  border-radius: 40px;
+  transform: rotate(-38deg);
+  /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15); */
+  left: 270px;
+  top: 25px;
+}
+
+.decoBar04 {
+  position: absolute;
+  width: 300px;
+  height: 45px;
+  background: var(--red);
+  border-radius: 40px;
+  transform: rotate(-38deg);
+  /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15); */
+  left: 450px;
+  top: 100px;
+}
+
+.main .search {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchBar {
+  display: flex;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.searchBar form {
+  display: flex;
+}
+
+.main .search input {
+  border: none;
+  width: 55vw;
+  padding-left: 13px;
+}
+
+.main .search input::placeholder {
+  font-size: 11px;
+  color: #999;
+  padding-left: 13px;
+}
+
+.main .search button {
+  width: 50px;
+}
+
+.main .search button:active {
+  background: var(--mainblue);
+  color: white;
+}
+
+.main .search p {
+  font-size: 14px;
+  font-weight: 800;
+  color: #222;
+  margin-top: 13px;
+  z-index: 1;
+}
+
+.searchBook {
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px;
+  box-shadow: 2px 0 3px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+.searchBar button {
+  border: none;
+  background: white;
+  border-radius: 0 5px 5px 0;
+  font-weight: 700;
+  font-size: 13px;
+  box-shadow: -2px 0 3px rgba(0, 0, 0, 0.15);
+}
+
+.offday .offdaySchedule {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.offday .offdaySchedule div {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  flex: 1;
+}
+
+.offdaySchedule div h3 {
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.offdaySchedule div p {
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.offdaySchedule p span {
+  display: inline-block;
+  font-size: 13px;
+  background: #222;
+  border-radius: 1rem;
+  color: white;
+  width: 40px;
+  margin-right: 10px;
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+.currentLibSchedule {
+  display: none;
+}
+
+.offHeader {
+  background: var(--sky);
+  width: 100%;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+}
+
+.workTime {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.tel {
+  font-size: 13px;
+  color: #666;
+  width: 90%;
+  text-align: center;
+  border-top: 1px solid var(--sky);
+  padding: 7px;
+}
+
+.offBottom {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.offBottom > div {
+  flex: 1;
+}
+
+.offBottom .workTime p {
+  font-size: 12px;
+}
+
+/* 소식 */
+
+.newsTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.currentnewsTitle {
+  position: relative;
+}
+
+.highlight {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 12px;
+  background: var(--yellow);
+  z-index: -1;
+  margin-top: 10px;
+}
+
+.newsTitle span a {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #555;
+  padding: 5px 10px;
+  border-radius: 1rem;
+  background: #f3f3f3;
+}
+
+.newsTitle span a:hover {
+  background: #333;
+  color: white;
+  transition: all 0.5s;
+}
+
+.news .notice-pre {
+  background: #222;
+  color: white;
+  padding: 1px 3px;
+  margin-right: 10px;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.newsList li a {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+/* 푸터 */
+
+.footer {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer a {
+  font-size: 16px;
+}
+
+.pcHeader {
+  display: none;
+}
+
+.pcFooter {
+  display: none;
+}
+
+.bookMenu {
+  display: none;
+}
+
+.pcLibInfo {
+  display: none;
+}
+
+.recommend {
+  display: none;
+}
+
+.changeCurLib {
+  display: none;
+}
+
+.pcSearch {
+  display: none;
+}
+
+.etc {
+  display: none;
+}
+
+.offdaySticker {
+  display: none;
+}
+
+.locationPopup {
+  display: none;
+}
+
+.top {
+  display: none;
+}
+@media all and (min-width: 769px) {
+  .footer,
+  .deco,
+  .search,
+  .sideNav,
+  .currentLibInfo,
+  .changeLib,
+  .libraryBox {
+    display: none !important;
+  }
+
+  .lineBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 92px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .header {
+    display: none;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .pcLibInfo {
+    display: block;
+  }
+
+  /* pc헤더 */
+
+  .pcHeader {
+    width: 100%;
+    height: 84px;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    background: transparent;
+    transition: all 0.4s;
+  }
+
+  .pcHeader.hover {
+    background: white;
+  }
+
+  .innerPcHeader {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .gnb ul {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+    padding: 3px;
+  }
+
+  .gnb ul a {
+    color: #222;
+    font-size: 14px;
+  }
+
+  .logo h1 a {
+    color: #222;
+    display: block;
+    width: 300px;
+    font-size: 25px;
+    font-weight: 800;
+    padding: 10px;
+  }
+
+  .lnb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+  }
+
+  .menuList {
+    display: flex;
+    height: 50px;
+    align-items: center;
+  }
+
+  .menuList li {
+    height: 100%;
+  }
+
+  .menuList li a {
+    display: block;
+    padding: 15px 20px;
+    height: 100%;
+    font-weight: 700;
+  }
+
+  .menuList li a:hover {
+    border-bottom: 3px solid var(--yellow);
+  }
+
+  .fullList {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .greet {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background: #f3f3f3;
+  }
+
+  .greetCircle {
+    position: absolute;
+    width: 120%;
+    height: 300px;
+    background: white;
+    top: -100px;
+    left: -10px;
+    border-radius: 50%;
+  }
+
+  .greetSticker {
+    position: absolute;
+    bottom: 15px;
+    right: -10px;
+    overflow: hidden;
+    width: 260px;
+  }
+
+  .greetSticker img {
+    width: 100%;
+  }
+
+  .greetDeco01 {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    background: var(--decoblue);
+    border-radius: 2rem;
+    transform: rotate(-30deg);
+    bottom: 25%;
+    left: 15%;
+  }
+  .greetDeco02 {
+    position: absolute;
+    width: 300px;
+    height: 35px;
+    background: var(--decoyellow);
+    border-radius: 2rem;
+    transform: rotate(-30deg);
+    top: 40%;
+    left: 20%;
+  }
+  .greetDeco03 {
+    position: absolute;
+    width: 300px;
+    height: 35px;
+    background: var(--decoblue);
+    border-radius: 2rem;
+    transform: rotate(-30deg);
+    bottom: 0;
+    left: -10%;
+  }
+
+  .greetText {
+    max-width: 270px;
+    margin-left: auto;
+  }
+
+  .greet p {
+    position: relative;
+    text-align: center;
+    width: fit-content;
+    margin: 70px auto;
+    font-weight: 800;
+    font-size: 25px;
+    z-index: 1;
+  }
+
+  .lnbBox {
+    flex: 2.5;
+    padding: 30px;
+    z-index: 1;
+  }
+
+  .lnbBox li > a {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 3px;
+    color: #444;
+  }
+
+  .lnbBox h3 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .lnbBox h3 a {
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  .lnbBox h3 a:hover {
+    color: var(--yellow);
+  }
+
+  .lnbTop {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .lnbTop h3 a {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .lnbTop ul {
+    margin-top: 10px;
+  }
+
+  .lnbTop div {
+    flex: 1;
+  }
+
+  .lnbLibs ul {
+    width: 80%;
+    margin: 10px 0;
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .lnbBox li a:hover {
+    font-weight: 700;
+  }
+
+  .pcContainer > * {
+    flex: 1;
+  }
+
+  /* 휴관일 운영시간 pc */
+
+  .main {
+    text-align: center;
+  }
+
+  .waveDeco {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 500px;
+  }
+
+  .main .container {
+    padding-top: 0;
+  }
+
+  .offday {
+    z-index: 11;
+    position: relative;
+    top: -40px;
+    display: flex;
+    gap: 60px;
+  }
+
+  .offdayTitle {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  .offday h2 {
+    font-weight: 800;
+    font-size: 45px;
+    text-align: end;
+  }
+
+  .offdaySticker {
+    display: block;
+    position: absolute;
+    width: 350px;
+    overflow: hidden;
+    left: -50px;
+    top: 0;
+  }
+
+  .offdaySticker img {
+    width: 100%;
+    display: block;
+  }
+
+  .titleWrap {
+    display: block;
+    transition: all 1s;
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  .offday .subTitle {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    transition: all 1s 0.5s;
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  .offday .offdaySchedule {
+    margin: 0 auto;
+    width: 70%;
+    z-index: 22;
+    position: relative;
+    text-align: start;
+    flex: 1.4;
+  }
+
+  .currentLib {
+    height: 100%;
+    background: #f3f3f3;
+  }
+
+  .currentLib .libImg {
+    height: 80vw;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .libImg::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 300px;
+    background: url(../img/graywave.png) no-repeat center center/cover;
+    background-size: 100% auto;
+    bottom: -1%;
+    left: 0;
+  }
+
+  .libImg .pcLibInfo {
+    position: absolute;
+    top: 35%;
+    padding: 15px;
+    width: 100%;
+    z-index: 111;
+    color: white;
+  }
+
+  .libImg .pcLibInfo h3 {
+    font-weight: 800;
+    font-size: 50px;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: all 1s;
+  }
+
+  .libImg .pcLibInfo .goHomePage {
+    display: block;
+    width: fit-content;
+    color: #333;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 2rem;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: all 1s;
+    margin-bottom: 10px;
+  }
+
+  .libImg .pcLibInfo .viewLocation {
+    display: block;
+    width: fit-content;
+    color: #333;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 2rem;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: all 1s;
+  }
+
+  .libImg img {
+    height: calc(100% - 83px);
+  }
+
+  .bookMenu {
+    display: block;
+    font-family: pretendard, "NanumSquare", sans-serif;
+    padding: 20px 0;
+    background: #f3f3f3;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .bookMenu .container {
+    display: flex;
+    gap: 60px;
+  }
+
+  .bookMenu h2 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 45px;
+    position: relative;
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(50%);
+  }
+
+  .bookMenu h2 span {
+    position: relative;
+    z-index: 0;
+  }
+
+  .bookMenuSticker {
+    position: absolute;
+    width: 350px;
+    right: -200px;
+    bottom: -80px;
+    border-radius: 50%;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .bookMenuSticker img {
+    width: 100%;
+    display: block;
+  }
+
+  .bookMenu ul {
+    flex: 1.6;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-left: 50px;
+  }
+
+  .bookMenu ul li {
+    width: 100%;
+    text-align: center;
+    border-radius: 1rem;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  .bookMenu .icon {
+    width: 80px;
+    height: 80px;
+    background: white;
+    display: flex;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 1.3rem;
+    transition: all 0.3s;
+  }
+
+  .bookMenu .icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .bookMenu ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  .bookMenu ul li:hover .icon {
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+
+  /* 오시는길 */
+
+  .locationPopup {
+    position: fixed;
+    top: 0;
+    z-index: 111;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+  }
+
+  .locationPopup.on {
+    display: block;
+  }
+
+  .locationPopup .container {
+    padding: 20px 30px;
+    margin: 15% auto;
+    background: white;
+    border-radius: 1rem;
+    max-width: 860px;
+  }
+
+  .closeMap {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .closeMap i {
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .map .mapBox {
+    width: 100%;
+    height: 300px;
+    background: white;
+    border-radius: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .map .way {
+    line-height: 1.6;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .way .mapAddr::before {
+    content: "주소";
+    background: #222;
+    color: white;
+    padding: 1px 3px;
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 13px;
+  }
+
+  .way .mapTel::before {
+    content: "전화";
+    background: #222;
+    color: white;
+    padding: 1px 3px;
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 13px;
+  }
+
+  .way .mapFax::before {
+    content: "팩스";
+    background: #222;
+    color: white;
+    padding: 1px 3px;
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 13px;
+  }
+
+  .quickChangeLib {
+    background: #fff;
+  }
+
+  .quickChangeLib .container {
+    padding: 0;
+  }
+
+  .quickChangeLib ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .quickChangeLib ul li {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: #666;
+    padding: 15px 5px;
+  }
+
+  .quickChangeLib ul li.active {
+    background: var(--blue);
+    font-weight: 700;
+    color: #333;
+    border: none;
+  }
+
+  .changeCurLib {
+    display: block;
+    position: fixed;
+    right: -105px;
+    top: 26%;
+    z-index: 111;
+    box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 0 1rem;
+    background: #fff;
+    transition: all 0.3s;
+  }
+
+  .changeCurLib .openTag {
+    position: absolute;
+    width: 40px;
+    left: -40px;
+    top: 0;
+    background: #fff;
+    color: #333;
+    border-radius: 1rem 0 0 1rem;
+    cursor: pointer;
+  }
+
+  .changeCurLib .openTag h2 {
+    font-size: 18px;
+  }
+
+  .changeCurLib.open {
+    right: 0;
+  }
+
+  .changeCurLib h2 {
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 0;
+  }
+
+  .changeCurLib .sideLibSelect li {
+    padding: 13px 22px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .changeCurLib .sideLibSelect li:hover {
+    background: var(--sky);
+  }
+
+  .changeCurLib .sideLibSelect li.selected {
+    background: var(--blue);
+    z-index: 11;
+    font-weight: 700;
+  }
+
+  .notice-pre {
+    font-size: 14px;
+  }
+
+  .newsTitle h2 {
+    margin: 0;
+  }
+
+  .newsList li a {
+    font-size: 14px;
+  }
+
+  .newsTitle span a {
+    font-size: 14px;
+    border: 1px solid #222;
+  }
+
+  /* pc 책 검색 서치 */
+  .pcSearch {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 60px 80px;
+    margin-bottom: 60px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+  }
+
+  .pcSearch h2 {
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .pcSearch .inputBox {
+    position: relative;
+  }
+
+  .pcSearch button {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    font-size: 18px;
+    color: #333;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .pcSearch input {
+    width: 45vw;
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 2rem;
+    outline: none;
+    border: 2px solid var(--yellow);
+    height: 45px;
+    transition: all 0.4s;
+  }
+
+  /* 인기 도서*/
+  .recommend {
+    display: block;
+    text-align: center;
+    margin-bottom: 100px;
+    position: relative;
+  }
+
+  /* .recommend::before {
+    content: "";
+    position: absolute;
+    top: -250px;
+    left: 0;
+    background: url("../img/whitewave.png");
+    width: 100%;
+    height: 300px;
+    z-index: -1;
+  }
+  .recommend::after {
+    content: "";
+    position: absolute;
+    bottom: -200px;
+    left: 0;
+    background: url("../img/waverev.png") no-repeat;
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+  } */
+
+  .recommend .container {
+    display: flex;
+    gap: 60px;
+  }
+
+  .recommend .recoTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    flex: 1;
+    gap: 10px;
+  }
+
+  .recommend h2 {
+    position: relative;
+    font-size: 45px;
+    font-weight: 800;
+    transition: all 1s;
+    transform: translateX(-50%);
+    opacity: 0;
+    margin-bottom: 0;
+  }
+
+  .recommend h2 span {
+    position: relative;
+    z-index: 1;
+  }
+
+  .recoTitle .recoLink a {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    border: 2px solid #222;
+    background: #f3f3f3;
+    color: #222;
+    font-weight: 600;
+    border-radius: 2rem;
+    transition: all 0.4s;
+  }
+
+  .recoTitle .recoLink {
+    z-index: 1;
+    transition: all 1s 0.5s;
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  .recoTitle .recoLink a:hover {
+    background: #222;
+    color: white;
+  }
+
+  .recoSticker {
+    position: absolute;
+    top: -30px;
+    left: -230px;
+    width: 350px;
+    overflow: hidden;
+  }
+  .recoSticker img {
+    display: block;
+    width: 100%;
+  }
+
+  .floatingBox {
+    flex: 1.8;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 30px 0;
+  }
+
+  .imgBox {
+    width: 160px;
+    min-width: 160px;
+    height: 220px;
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.4s;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper {
+    padding: 20px;
+  }
+
+  .imgBox:hover {
+    transform: translateY(-2%);
+    box-shadow: 0 3px 7px 1px rgba(0, 0, 0, 0.15);
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #333;
+  }
+
+  .floatingItem:nth-child(even) {
+    transform: translateY(20px);
+  }
+
+  .floatingItem:nth-child(even):hover {
+    transform: translateY(13px);
+    box-shadow: 3px 5px 7px 1px rgba(0, 0, 0, 0.15);
+  }
+
+  /* 공모전 공지 소식 */
+
+  .etc {
+    display: block;
+    margin-bottom: 60px;
+  }
+
+  .etc .container {
+    display: flex;
+    gap: 60px;
+  }
+
+  .etc .container div {
+    flex: 1;
+  }
+
+  .ad {
+    position: relative;
+    background: palegoldenrod;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  .ad a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .ad span {
+    display: block;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+  }
+
+  .ad h4 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+  }
+
+  .ad p {
+    font-weight: 500;
+    font-size: 17px;
+    margin-left: 30px;
+  }
+
+  .adImg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    display: none;
+  }
+  .adImg img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* pc 푸터 */
+
+  .pcFooter {
+    position: relative;
+    display: block;
+    background: #f3f3f3;
+    box-shadow: none;
+    font-family: pretendard, "NanumSquare", sans-serif;
+    font-size: 15px;
+    background: white;
+  }
+  .pcFooter::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: -100px;
+    left: 0;
+    background: url("../img/lowwave.png");
+  }
+
+  .pcFooter .term {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .pcFooter .term li a {
+    font-weight: 500;
+  }
+
+  .pcFooter .title h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    position: relative;
+    margin-top: 10px;
+  }
+
+  .inquire {
+    display: flex;
+  }
+
+  .siteInfo {
+    font-size: 14px;
+    color: #999;
+  }
+
+  .inquire,
+  .othersite,
+  .otherLibSite {
+    display: flex;
+  }
+
+  .pcFooter ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  h4.footerTitle {
+    min-width: 160px;
+    z-index: 111;
+  }
+
+  .pcFooter {
+    line-height: 1.8;
+    overflow: hidden;
+  }
+
+  .pcFooter .container {
+    position: relative;
+  }
+
+  .pcFooter .decoCir01 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--yellow);
+    position: absolute;
+    bottom: 100px;
+    left: -40px;
+  }
+
+  .pcFooter .decoCir02 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--blue);
+    position: absolute;
+    bottom: 50px;
+    right: 40px;
+  }
+
+  .otherLibSite ul li,
+  .othersite ul li {
+    margin-right: 20px;
+    z-index: 111;
+  }
+
+  .siteInfo p {
+    font-size: 13px;
+  }
+
+  /*퀵메뉴 */
+
+  .quickSide {
+    position: fixed;
+    bottom: 30%;
+    background: white;
+    border-radius: 0 1rem 1rem 0;
+    box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 111;
+  }
+
+  .quickSide ul {
+    padding: 40px 20px;
+    line-height: 1.6;
+    position: relative;
+  }
+
+  .quickSide ul li {
+    font-size: 18px;
+  }
+
+  .quickSide li:hover a {
+    font-weight: 700;
+  }
+
+  .quickTitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .quickDeco {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: var(--yellow);
+    border-radius: 50%;
+    top: -10%;
+    left: -25%;
+    z-index: -1;
+  }
+
+  .top {
+    display: block;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 60px;
+    height: 60px;
+    background: #222;
+    z-index: 11;
+    border-radius: 50%;
+  }
+
+  .top a {
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 60px;
+    margin: 0 auto;
+    transition: all 1s;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .currentLib .libImg {
+    height: 95vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .libImg::after {
+    bottom: 1%;
+  }
+
+  .libImg .pcLibInfo {
+    bottom: 0;
+  }
+
+  .adImg {
+    display: block;
+  }
+
+  .greetDeco {
+    left: 15%;
+    z-index: 2;
+  }
+
+  .offday .offdaySchedule div {
+    width: 80%;
+  }
+
+  .bookMenu ul {
+    gap: 0;
+  }
+
+  .bookMenu ul li {
+    width: 130px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1281px) {
+  .libImg::after {
+    bottom: 3.5%;
+  }
+}

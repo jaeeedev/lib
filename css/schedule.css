@@ -1,0 +1,357 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+/*300 400 700 800*/
+
+:root {
+    --mainblue: #009AFF;
+    --sky: #A7D7F1;
+    --yellow: #FFC831;
+    --green: #23E685;
+    --red: #FF8F8F;
+    --blue: #6DC4F1;
+    --mint: #7ED9D9;
+    --purple: #AF81DC;
+    --btnblue: #0FA0E4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 나눔스퀘어, 'NanumSquare', sans-serif;
+    transform: rotate(0.04deg);
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* 헤더 */
+
+.innerHeader {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 1px 9px 1px rgba(0, 0, 0, 0.15);
+}
+
+.logo h1 {
+    width: 140px;
+}
+
+.logo h2 a {
+    display: block;
+    width: 100%;
+}
+
+.logo a img {
+    display: block;
+    width: 100%;
+}
+
+/*  사이드내브   */
+
+.sideNavBtn:checked~.sideNav {
+    left: 0;
+}
+
+.sideNav {
+    z-index: 1111;
+    position: absolute;
+    left: -80%;
+    width: 80%;
+    height: calc(100% - 60px);
+    /* 헤더 높이 아래부터 사이드내브가 시작되어
+     푸터가 들뜨는 문제발생 -> 헤더 높이를 뺴줬음 */
+    background: var(--mainblue);
+    overflow: hidden;
+    transition: all 0.4s;
+}
+
+.sideNav .sideNavLabel {
+    position: absolute;
+    width: 100%;
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
+    left: 85%;
+}
+
+.sideNav>ul {
+    margin-top: 50px;
+}
+
+.sideNavBtn {
+    display: none;
+}
+
+.sideNav>ul>li {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    font-weight: 700;
+    color: white;
+}
+
+.sideNav a {
+    color: white;
+    display: block;
+}
+
+.sideNav>label>i {
+    margin-right: 20px;
+}
+
+/*  사이드내브안의리스트~~~~~!!!!!!!  */
+
+.sideNav input[type="checkbox"] {
+    display: none;
+}
+
+.sideNav .hideList {
+    background: white;
+    display: none;
+    color: #222;
+    line-height: 1.6;
+}
+
+.sideNav .hideList a {
+    color: #222;
+}
+
+.introLibOpen:checked~.hideList01 {
+    display: block;
+}
+
+.findBookOpen:checked~.hideList02 {
+    display: block;
+}
+
+.readingChangwon:checked~.hideList03 {
+    display: block;
+}
+
+.myPage:checked~.hideList04 {
+    display: block;
+}
+
+.useHomepage:checked~.hideList05 {
+    display: block;
+}
+
+.libSchedule:checked~.hideList06 {
+    display: block;
+}
+
+
+/* 주간일정 */
+
+.weekSch {
+    background: #f3f3f3;
+}
+
+.weekSch h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.weekSch h2 span {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.weekSch ul li {
+    background: white;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.15);
+    margin-bottom: 10px;
+}
+
+.weekSch .left {
+    min-width: 70px;
+    border-radius: 5px 0 0 5px;
+    background: var(--red);
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.weekSch .left .day {
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.weekSch .left.day18 {
+    background: #ccc;
+}
+
+.weekSch .left.day20 {
+    background: var(--blue);
+}
+
+.weekSch .left.day22 {
+    background: var(--mint);
+}
+
+.weekSch .right {
+    width: 100%;
+}
+
+.weekSch .right a {
+    padding: 15px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weekSch .right h3 {
+    font-size: 13px;
+}
+
+/* 캘린더 */
+.calendarDate {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.calendarDate .month {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--mainblue);
+    margin-right: 10px;
+}
+
+.calendarDate .year {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.calendarTable {
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.weekdays,
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 14px;
+}
+
+.days li {
+    padding-bottom: 30px;
+}
+
+.weekdays {
+    margin-bottom: 10px;
+}
+
+.close {
+    background: #ddd;
+}
+
+.red {
+    background: var(--red);
+    border-radius: 50%;
+}
+
+.blue {
+    background: var(--blue);
+    border-radius: 50%;
+}
+
+.mint {
+    background: var(--mint);
+    border-radius: 50%;
+}
+
+/* 월간 일정 */
+
+.monthSch h2 {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.monthSch ul li {
+    display: flex;
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    font-weight: 700;
+}
+
+.monthEventBox {
+    width: 100%;
+}
+
+.monthDate {
+    width: 30px;
+    font-weight: 700;
+}
+
+
+.monthEventBox .monthEvent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.eventTitle {
+    width: 100%;
+    flex: 1;
+}
+
+.eventDetail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+/* 푸터 */
+
+.footer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+    transform: rotate(-0.03deg);
+}
+
+.footer a {
+    font-weight: 800;
+    font-size: 15px;
+}

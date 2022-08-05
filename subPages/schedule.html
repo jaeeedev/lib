@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도서관사업소</title>
+    <script src="https://kit.fontawesome.com/7cde33c3cd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/schedule.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="innerHeader">
+            <div class="logo">
+                <h1><a href="main.html"><img src="../img/logo_top.png" alt="상단로고"></a></h1>
+            </div>
+            <label for="sideNavBtn" class="sideNavLabel"><i class="fa-solid fa-bars"></i></label>
+        </div>
+    </header>
+    <input type="checkbox" id="sideNavBtn" class="sideNavBtn">
+    <nav class="sideNav">
+        <label for="sideNavBtn" class="sideNavLabel"><i class="fa-solid fa-xmark"></i></label>
+        <ul>
+            <li><a href="login.html">로그인</a></li>
+            <li><label for="introLibOpen">도서관소개 <i class="fa-solid fa-chevron-down"></i></label>
+            </li>
+            <input type="checkbox" id="introLibOpen" class="introLibOpen">
+            <li class="hideList hideList01">
+                <ul>
+                    <li><a href="../fakepages/greeting.html">인사말</a></li>
+                    <li><a href="../fakepages/history.html">연혁</a></li>
+                    <li><a href="https://lib.changwon.go.kr/cl/about/libps.html">도서관현황</a></li>
+                    <li><a href="">도서관 이용예절</a></li>
+                    <li><a href="">의견수렴</a></li>
+                </ul>
+            </li>
+            <li><label for="findBookOpen">자료찾기 <i class="fa-solid fa-chevron-down"></i></label>
+            </li>
+            <input type="checkbox" id="findBookOpen" class="findBookOpen">
+            <li class="hideList hideList02">
+                <ul>
+                    <li><a href="./best.html">도서대출베스트</a></li>
+                    <li>자료검색/예약</li>
+                    <li>신착도서</li>
+                    <li>권장도서</li>
+                </ul>
+            </li>
+            <!-- <li><a href="#!">책읽는창원 <label for="readingChangwon"><i class="fa-solid fa-chevron-down"></i></label></a>
+            </li>
+            <input type="checkbox" id="readingChangwon" class="readingChangwon">
+            <li class="hideList hideList03">
+                <ul>
+                    <li><a href="#!">책읽는 창원소식</a></li>
+                    <li><a href="#!">창원의 책</a></li>
+                    <li><a href="#!">독서릴레이</a></li>
+                    <li><a href="#!">독후감전국공모전</a></li>
+                    <li><a href="#!">책읽는 창원 갤러리</a></li>
+                </ul>
+            </li> -->
+            <li><label for="myPage">마이페이지 <i class="fa-solid fa-chevron-down"></i></label></li>
+            <input type="checkbox" id="myPage" class="myPage">
+            <li class="hideList hideList04">
+                <ul>
+                    <li><a href="./login.html">로그인</a></li>
+                    <li><a href="#!">회원가입</a></li>
+                    <li><a href="#!">아이디찾기</a></li>
+                    <li><a href="#!">비밀번호찾기</a></li>
+                    <li><a href="#!">도서대출내역조회</a></li>
+                    <!-- <li><a href="#!">희망도서신청</a></li> -->
+                    <li><a href="#!">도서예약조회</a></li>
+                    <!-- <li><a href="#!">개인정보 재동의</a></li> -->
+                </ul>
+            </li>
+            <!-- <li><a href="#!">홈페이지 이용안내 <label for="useHomepage"><i class="fa-solid fa-chevron-down"></i></label></a>
+            </li>
+            <input type="checkbox" id="useHomepage" class="useHomepage">
+            <li class="hideList hideList05">
+                <ul>
+                    <li><a href="#!">홈페이지이용안내</a></li>
+                    <li><a href="#!">홈페이지오류신고</a></li>
+                    <li><a href="#!">개인정보처리방침</a></li>
+                    <li><a href="#!">행정서비스헌장</a></li>
+                    <li><a href="#!">저작권보호정책</a></li>
+                    <li><a href="#!">뷰어프로그램</a></li>
+                    <li><a href="#!">사이트맵</a></li>
+                </ul>
+            </li> -->
+            <li><label for="libSchedule">도서관 일정 <i class="fa-solid fa-chevron-down"></i></label></li>
+            <input type="checkbox" id="libSchedule" class="libSchedule">
+            <li class="hideList hideList06">
+                <ul>
+                    <li><a href="#!">창원중앙도서관</a></li>
+                    <li><a href="#!">성산도서관</a></li>
+                    <li><a href="./schedule.html">상남도서관</a></li>
+                    <li><a href="#!">최윤덕도서관</a></li>
+                    <li><a href="#!">고향의봄도서관</a></li>
+                    <li><a href="#!">명곡도서관</a></li>
+                    <li><a href="#!">마산합포도서관</a></li>
+                    <li><a href="#!">마산회원도서관</a></li>
+                    <li><a href="#!">내서도서관</a></li>
+                    <li><a href="#!">중리초등도서관</a></li>
+                    <li><a href="#!">진해도서관</a></li>
+                    <li><a href="#!">동부도서관</a></li>
+                </ul>
+            </li>
+            <!-- <li><a href="#!">작은도서관</a></li> -->
+
+        </ul>
+    </nav>
+
+    <section class="weekSch">
+        <div class="container">
+            <h2>주간 일정 <span>(2022-04-17 ~ 2022-04-23)</span></h2>
+            <ul>
+                <li>
+                    <div class="left">
+                        <p class="day day17">17</p>
+                        <p class="weekday">일</p>
+                    </div>
+                    <div class="right">
+                        <a href="#!">
+                            <h3>가족체험 『DIY 벽걸이 책꽂이 만들기』</h3>
+                            <span><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="left day18">
+                        <p class="day">18</p>
+                        <p class="weekday">월</p>
+                    </div>
+                    <div class="right">
+                        <a href="#!">
+                            <h3>정기휴관</h3>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="left day20">
+                        <p class="day">20</p>
+                        <p class="weekday">수</p>
+                    </div>
+                    <div class="right">
+                        <a href="#!">
+                            <h3>그림책 읽는 어른</h3>
+                            <span><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="left day22">
+                        <p class="day">22</p>
+                        <p class="weekday">금</p>
+                    </div>
+                    <div class="right">
+                        <a href="#!">
+                            <h3>랜선으로 떠나는 도서관 여행</h3>
+                            <span><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="calendar container">
+        <div class="calendarDate">
+            <p class="month">04</p>
+            <p class="year">2022</p>
+        </div>
+        <div class="calendarTable">
+            <ul class="weekdays">
+                <li>Su</li>
+                <li>Mo</li>
+                <li>Tu</li>
+                <li>We</li>
+                <li>Th</li>
+                <li>Fr</li>
+                <li>Sa</li>
+            </ul>
+            <ul class="days">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li class="close">4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li class="close">11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+                <li>16</li>
+                <li><span class="red">17</span></li>
+                <li class="close">18</li>
+                <li>19</li>
+                <li><span class="blue">20</span></li>
+                <li>21</li>
+                <li><span class="mint">22</span></li>
+                <li>23</li>
+                <li>24</li>
+                <li class="close">25</li>
+                <li>26</li>
+                <li>27</li>
+                <li>28</li>
+                <li>29</li>
+                <li>30</li>
+            </ul>
+        </div>
+    </section>
+    <section class="monthSch container">
+        <h2>월간 일정</h2>
+        <ul>
+            <li>
+                <div class="monthDate">
+                    <span>1</span>
+                </div>
+                <div class="monthEventBox">
+                    <div class="monthEvent">
+                        <div class="eventTitle">
+                            <a href="#!">4월 그림책 원화 아트프린트 전시</a>
+                        </div>
+                        <div class="eventDetail">
+                            <a href="#!"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="monthDate">
+                    <span>4</span>
+                </div>
+                <div class="monthEventBox">
+                    <div class="monthEvent">
+                        <div class="eventTitle">
+                            <a href="#!">정기휴관</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="monthDate">
+                    <span>9</span>
+                </div>
+                <div class="monthEventBox">
+                    <div class="monthEvent">
+                        <div class="eventTitle">
+                            <a href="#!">책가람 어린이 독서회</a>
+                        </div>
+                        <div class="eventDetail">
+                            <a href="#!"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="monthDate">
+                    <span>11</span>
+                </div>
+                <div class="monthEventBox">
+                    <div class="monthEvent">
+                        <div class="eventTitle">
+                            <a href="#!">정기휴관</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="monthDate">
+                    <span>12</span>
+                </div>
+                <div class="monthEventBox">
+                    <div class="monthEvent">
+                        <div class="eventTitle">
+                            <a href="#!">내 마음을 맞춰봐요! ㅅㅅㅎ</a>
+                        </div>
+                        <div class="eventDetail">
+                            <a href="#!"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="monthEvent">
+                        <div class="eventTitle">
+                            <a href="#!">돌아와요! 도서관에 - 연체해제</a>
+                        </div>
+                        <div class="eventDetail">
+                            <a href="#!"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="monthEvent">
+                        <div class="eventTitle">
+                            <a href="#!">북스타트 책꾸러미 배부</a>
+                        </div>
+                        <div class="eventDetail">
+                            <a href="#!"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="monthEvent">
+                        <div class="eventTitle">
+                            <a href="#!">우연히 당신과 인연이 될 책 『블라인드 북』</a>
+                        </div>
+                        <div class="eventDetail">
+                            <a href="#!"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="monthDate">
+                    <span>15</span>
+                </div>
+                <div class="monthEventBox">
+                    <div class="monthEvent">
+                        <div class="eventTitle">
+                            <a href="#!">랜선으로 떠나는 도서관 여행</a>
+                        </div>
+                        <div class="eventDetail">
+                            <a href="#!"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="monthDate">
+                    <span>17</span>
+                </div>
+                <div class="monthEventBox">
+                    <div class="monthEvent">
+                        <div class="eventTitle">
+                            <a href="#!">가족체험 『DIY 벽걸이 책꽂이 만들기』 </a>
+                        </div>
+                        <div class="eventDetail">
+                            <a href="#!"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="monthDate">
+                    <span>18</span>
+                </div>
+                <div class="monthEventBox">
+                    <div class="monthEvent">
+                        <div class="eventTitle">
+                            <a href="#!">정기휴관</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="monthDate">
+                    <span>20</span>
+                </div>
+                <div class="monthEventBox">
+                    <div class="monthEvent">
+                        <div class="eventTitle">
+                            <a href="#!">그림책 읽는 어른</a>
+                        </div>
+                        <div class="eventDetail">
+                            <a href="#!"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="monthDate">
+                    <span>22</span>
+                </div>
+                <div class="monthEventBox">
+                    <div class="monthEvent">
+                        <div class="eventTitle">
+                            <a href="#!">랜선으로 떠나는 도서관 여행</a>
+                        </div>
+                        <div class="eventDetail">
+                            <a href="#!"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="monthDate">
+                    <span>23</span>
+                </div>
+                <div class="monthEventBox">
+                    <div class="monthEvent">
+                        <div class="eventTitle">
+                            <a href="#!">책과 포춘쿠키의 만남</a>
+                        </div>
+                        <div class="eventDetail">
+                            <a href="#!"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="monthDate">
+                    <span>25</span>
+                </div>
+                <div class="monthEventBox">
+                    <div class="monthEvent">
+                        <div class="eventTitle">
+                            <a href="#!">정기휴관</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="monthDate">
+                    <span>27</span>
+                </div>
+                <div class="monthEventBox">
+                    <div class="monthEvent">
+                        <div class="eventTitle">
+                            <a href="#!">4월 문화가 있는 날</a>
+                        </div>
+                        <div class="eventDetail">
+                            <a href="#!"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="monthDate">
+                    <span>29</span>
+                </div>
+                <div class="monthEventBox">
+                    <div class="monthEvent">
+                        <div class="eventTitle">
+                            <a href="#!">랜선으로 떠나는 도서관 여행</a>
+                        </div>
+                        <div class="eventDetail">
+                            <a href="#!"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <h3><a href="#!">대출조회/반납연기</a></h3>
+        <h3><a href="#!">도서예약조회</a></h3>
+        <h3><a href="#!">전자도서관</a></h3>
+        <h3 class="undo" onclick="history.back()"><a href="javascript:void(0)"><i
+                    class="fa-solid fa-rotate-left"></i></a></h3>
+    </footer>
+
+
+</body>
+
+</html>

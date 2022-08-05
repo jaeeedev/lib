@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도서관사업소</title>
+    <script src="https://kit.fontawesome.com/7cde33c3cd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    
+
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="innerHeader">
+            <div class="logo">
+                <h1><a href="main.html"><img src="../img/logo_top.png" alt="상단로고"></a></h1>
+            </div>
+            <label for="sideNavBtn" class="sideNavLabel"><i class="fa-solid fa-bars"></i></label>
+        </div>
+    </header>
+    <input type="checkbox" id="sideNavBtn" class="sideNavBtn">
+    <nav class="sideNav">
+        <label for="sideNavBtn" class="sideNavLabel"><i class="fa-solid fa-xmark"></i></label>
+        <ul>
+            <li><a href="login.html">로그인</a></li>
+            <li><label for="introLibOpen">도서관소개 <i class="fa-solid fa-chevron-down"></i></label>
+            </li>
+            <input type="checkbox" id="introLibOpen" class="introLibOpen">
+            <li class="hideList hideList01">
+                <ul>
+                    <li><a href="../fakepages/greeting.html">인사말</a></li>
+                    <li><a href="../fakepages/history.html">연혁</a></li>
+                    <li><a href="https://lib.changwon.go.kr/cl/about/libps.html">도서관현황</a></li>
+                    <li><a href="">도서관 이용예절</a></li>
+                    <li><a href="">의견수렴</a></li>
+                </ul>
+            </li>
+            <li><label for="findBookOpen">자료찾기 <i class="fa-solid fa-chevron-down"></i></label>
+            </li>
+            <input type="checkbox" id="findBookOpen" class="findBookOpen">
+            <li class="hideList hideList02">
+                <ul>
+                    <li><a href="./best.html">도서대출베스트</a></li>
+                    <li>자료검색/예약</li>
+                    <li>신착도서</li>
+                    <li>권장도서</li>
+                </ul>
+            </li>
+
+            <li><label for="myPage">마이페이지 <i class="fa-solid fa-chevron-down"></i></label></li>
+            <input type="checkbox" id="myPage" class="myPage">
+            <li class="hideList hideList04">
+                <ul>
+                    <li><a href="./login.html">로그인</a></li>
+                    <li><a href="#!">회원가입</a></li>
+                    <li><a href="#!">아이디찾기</a></li>
+                    <li><a href="#!">비밀번호찾기</a></li>
+                    <li><a href="#!">도서대출내역조회</a></li>
+                    <!-- <li><a href="#!">희망도서신청</a></li> -->
+                    <li><a href="#!">도서예약조회</a></li>
+                    <!-- <li><a href="#!">개인정보 재동의</a></li> -->
+                </ul>
+            </li>
+            <li><a href="#!">홈페이지 이용안내 <label for="useHomepage"><i class="fa-solid fa-chevron-down"></i></label></a>
+            </li>
+            <input type="checkbox" id="useHomepage" class="useHomepage">
+            <li class="hideList hideList05">
+                <ul>
+                    <li><a href="#!">홈페이지이용안내</a></li>
+                    <li><a href="#!">홈페이지오류신고</a></li>
+                    <li><a href="#!">개인정보처리방침</a></li>
+                    <li><a href="#!">행정서비스헌장</a></li>
+                    <li><a href="#!">저작권보호정책</a></li>
+                    <li><a href="#!">뷰어프로그램</a></li>
+                    <li><a href="#!">사이트맵</a></li>
+                </ul>
+            </li>
+            <li><label for="libSchedule">도서관 일정 <i class="fa-solid fa-chevron-down"></i></label></li>
+            <input type="checkbox" id="libSchedule" class="libSchedule">
+            <li class="hideList hideList06">
+                <ul>
+                    <li><a href="#!">창원중앙도서관</a></li>
+                    <li><a href="#!">성산도서관</a></li>
+                    <li><a href="./schedule.html">상남도서관</a></li>
+                    <li><a href="#!">최윤덕도서관</a></li>
+                    <li><a href="#!">고향의봄도서관</a></li>
+                    <li><a href="#!">명곡도서관</a></li>
+                    <li><a href="#!">마산합포도서관</a></li>
+                    <li><a href="#!">마산회원도서관</a></li>
+                    <li><a href="#!">내서도서관</a></li>
+                    <li><a href="#!">중리초등도서관</a></li>
+                    <li><a href="#!">진해도서관</a></li>
+                    <li><a href="#!">동부도서관</a></li>
+                </ul>
+            </li>
+
+
+        </ul>
+    </nav>
+
+    <div class="pcHeader">
+        <div class="innerPcHeader">
+            <div class="gnb">
+                <ul>
+                    <li><a href="#!">로그인</a></li>
+                    <li><a href="#!">회원가입</a></li>
+                </ul>
+            </div>
+            <div class="lnb">
+            <div class="logo">
+                <h1><a href="main.html">도서관사업소</a></h1>
+            </div>
+            <div class="menus">
+                <ul class="menuList">
+                    <li><a href="#!">도서관소개</a>
+                    </li>
+                    <li><a href="#!">자료찾기</a>
+                    </li>
+                    <li><a href="#!">마이페이지</a> 
+                    </li>
+                    <li><a href="#!">이용안내</a>
+                    </li>
+                    <li><a href="#!">도서관 일정</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+           
+        </div>
+        <div class="fullList">
+            <div class="greet">
+                <div class="greetDeco01"></div>
+                <div class="greetDeco02"></div>
+                <div class="greetDeco03"></div>
+                <div class="greetCircle"></div>
+                <div class="greetSticker">
+                    <img src="../img/108.png" alt="">
+                </div>
+                <div class="greetText">
+                <p>방문을<br>환영합니다</p>
+            </div>
+            </div>
+               
+            <div class="lnbBox">
+                <div class="lnbTop">
+                    <div>
+                        <h3><a href="#!"><span>도서관소개</span><i class="fa-solid fa-angle-right"></i></a></h3>
+                        <ul>
+                        <li><a href="#!">인사말</a></li>
+                        <li><a href="#!">연혁</a></li>
+                        <li><a href="#!">도서관현황</a></li>
+                        <li><a href="#!">도서관 이용예절</a></li>
+                        <li><a href="#!">의견수렴</a></li>
+                    </ul></div>
+                    <div>
+                        <h3><a href="#!">자료찾기 <i class="fa-solid fa-angle-right"></i></a></h3>
+                        <ul>
+                        <li><a href="#!">도서대출베스트</a></li>
+                        <li><a href="#!">자료검색/예약</a></li>
+                        <li><a href="#!">신착도서</a></li>
+                        <li><a href="#!">권장도서</a></li>
+                    </ul></div>
+                    <div>
+                        <h3><a href="#!">마이페이지 <i class="fa-solid fa-angle-right"></i></a></h3>
+                        <ul>
+                        <li><a href="#!">홈페이지이용안내</a></li>
+                        <li><a href="#!">홈페이지오류신고</a></li>
+                        <li><a href="#!">개인정보처리방침</a></li>
+                        <li><a href="#!">행정서비스헌장</a></li>
+                        <li><a href="#!">저작권보호정책</a></li>
+                        <li><a href="#!">뷰어프로그램</a></li>
+                        <li><a href="#!">사이트맵</a></li>
+                    </ul></div>
+                    <div>
+                        <h3><a href="#!">이용안내 <i class="fa-solid fa-angle-right"></i></a></h3>
+                        <ul>
+                        <li><a href="#!">홈페이지이용안내</a></li>
+                        <li><a href="#!">홈페이지오류신고</a></li>
+                        <li><a href="#!">개인정보처리방침</a></li>
+                        <li><a href="#!">행정서비스헌장</a></li>
+                        <li><a href="#!">저작권보호정책</a></li>
+                        <li><a href="#!">뷰어프로그램</a></li>
+                        <li><a href="#!">사이트맵</a></li>
+                    </ul></div>
+                </div>
+                <div class="lnbLibs">
+                    <h3><a href="#!">도서관 일정 <i class="fa-solid fa-angle-right"></i></a></h3>
+                    <ul>
+                        <li><a href="#!">창원중앙도서관</a></li>
+                        <li><a href="#!">성산도서관</a></li>
+                        <li><a href="#!">상남도서관</a></li>
+                        <li><a href="#!">최윤덕도서관</a></li>
+                        <li><a href="#!">고향의봄도서관</a></li>
+                        <li><a href="#!">명곡도서관</a></li>
+                        <li><a href="#!">마산합포도서관</a></li>
+                        <li><a href="#!">마산회원도서관</a></li>
+                        <li><a href="#!">내서도서관</a></li>
+                        <li><a href="#!">중리초등도서관</a></li>
+                        <li><a href="#!">진해도서관</a></li>
+                        <li><a href="#!">동부도서관</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="pcContainer">
+            <div class="locationPopup">
+                <div class="container">
+                    <section class="map">
+                        <div class="closeMap"><i class="fa-solid fa-x"></i></div>
+                        <h2>오시는길</h2>
+                        <div class="mapBox"></div>
+                        <div class="way">
+                            <p class="mapAddr">(51472) 경상남도 창원시 성산구 외리로 47(남산동) </p>
+                            <p class="mapTel"> 055-225-7401 </p>
+                            <p class="mapFax"> 055-225-4801 </p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="currentLibWrapper">
+                <section class="currentLib">
+                    <div class="libImg">
+                        <img src="../img/lib2.jpg" alt="도서관 사진">
+                        <div class="pcLibInfo">
+                            <h3><span>창원중앙</span>도서관</h3>
+                            <p class="goHomePage"><a href="#!">홈페이지 바로가기</a></p>
+                            <p class="viewLocation"><a href="#!">상세위치 보기</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="currentLibInfo">
+                        <h2><span>창원중앙</span>도서관</h2>
+                        <h3><a href="#!">상세위치 <i class="fa-solid fa-angle-right"></i></a></h3>
+                        <h3><a href="#!">홈페이지 <i class="fa-solid fa-angle-right"></i></a>
+                        </h3>
+                    </div>
+                    <h3 class="changeLib"><label for="showSelectLib">도서관 변경하기</label></h3>
+                </section>
+                <section class="selectLib">
+                    <input type="checkbox" id="showSelectLib" class="showSelectLib">
+                    <div class="libraryBox">
+                        <div class="selected" data-index="1">중앙</div>
+                        <div data-index="2">성산</div>
+                        <div data-index="3">상남</div>
+                        <div data-index="1">최윤덕</div>
+                        <div data-index="1">고향의봄</div>
+                        <div data-index="1">명곡</div>
+                        <div data-index="1">마산합포</div>
+                        <div data-index="1">마산회원</div>
+                        <div data-index="1">내서</div>
+                        <div data-index="1">중리초등</div>
+                        <div data-index="1">진해</div>
+                        <div data-index="1">동부</div>
+                    </div>
+                </section>
+
+            <section class="main">
+                <div class="decoBar01 deco"></div>
+                <div class="decoBar02 deco"></div>
+                <div class="decoBar03 deco"></div>
+                <div class="decoBar04 deco"></div>
+                <div class="container">
+
+
+                    <div class="search">
+                        <div class="searchBar">
+                            <select name="searchBook" id="searchBook" class="searchBook">
+                                <option value="">통합검색</option>
+                                <option value="">표제</option>
+                                <option value="">저자</option>
+                                <option value="">발행자</option>
+                                <option value="">키워드</option>
+                            </select>
+                            <form>
+                                <input type="search" placeholder="파친코 2(이민진 장편소설): 이민진 장편소설">
+                                <button type="button">검색</button>
+                            </form>
+                        </div>
+                        <p class="searchMent">도서를 검색해보세요.</p>
+                    </div>
+
+
+                    <div class="offday">
+                        <div class="offdayTitle">
+                        <h2>
+                            <div class="offdaySticker">
+                                <img src="../img/163.png" alt="">
+                            </div>
+                            <div class="titleWrap"><span class="currentTitle">창원중앙</span>도서관<br></div>
+                            <span class="subTitle">휴관일, 운영시간</span>
+                        </h2>
+                    </div>
+                        <div class="offdaySchedule">
+                            <div>
+                                <h3>어린이자료실<br>생활문화공간 다락</h3>
+                                <p><span>화~금</span>09:00 ~ 22:00</p>
+                                <p><span>주말</span>09:00 ~ 18:00</p>
+                            </div>
+                            <div>
+                                <h3>종합자료실<br>
+                                    디지털‧연속간행물실</h3>
+                                <p><span>월~목</span>09:00 ~ 18:00</p>
+                                <p><span>토~일</span>09:00 ~ 18:00</p>
+                            </div>
+                            <div>
+                                <h3>자율학습실</h3>
+                                <p><span>월~일</span>08:00 ~ 22:00</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                  
+            </section>
+        </div>
+    </div>
+
+    <section class="bookMenu">
+        <div class="container">
+            <ul>
+                <li><div class="icon">
+                    <img src="../img/shopping-cart.png" alt="">
+                </div><p><a href="#!">대출 조회</a></p></li>
+                <li><div class="icon">
+                    <img src="../img/arrows.png" alt="">
+                </div><p><a href="#!">반납 연기</a></p></li>
+                <li><div class="icon">
+                    <img src="../img/diary.png" alt="">
+                </div><p><a href="#!">도서 예약 조회</a></p></li>
+                <li><div class="icon">
+                    <img src="../img/folders.png" alt="">
+                </div><p><a href="#!">전자 도서관</a></p></li>
+                </ul>
+                <h2><span>도서 메뉴<div class="bookMenuSticker">
+                    <img src="../img/248.png" alt="">
+                </div></span></h2>
+        </div>
+    </section>
+
+
+            <section class="changeCurLib">
+                <div class="openTag">
+                <h2>도서관 변경</h2>
+            </div>
+                <ul class="sideLibSelect">
+                    <li class="selected">창원중앙</li>
+                    <li>성산</li>
+                    <li>상남</li>
+                    <li>최윤덕</li>
+                    <li>고향의봄</li>
+                    <li>명곡</li>
+                    <li>마산합포</li>
+                    <li>마산회원</li>
+                    <li>내서</li>
+                    <li>중리초등</li>
+                    <li>진해</li>
+                    <li>동부</li>
+                </ul>
+            </section>
+
+    <section class="pcSearch">
+        <h2>책을 검색해 보세요</h2>
+        <div class="inputBox">
+        <input type="text" placeholder="인플레이션에서 살아남기 | 오건영">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+    </section>
+
+
+    <section class="recommend">
+        <div class="container">
+        <div class="recoTitle">
+        <h2><span>인기 도서</span>
+            <div class="recoSticker">
+            <img src="../img/251.png" alt="인기도서 장식용 이미지">
+        </div></h2>
+        <span class="recoLink"><a href="#!">보러 가기 <i class="fa-solid fa-angle-right"></i></a></span>
+        </div>
+        <div class="floatingBox">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><div class="imgBox">
+                    <a href="#!">
+                    <img src="../img/지구끝의온실.jpg" alt="">
+                    </a>
+                </div></div>
+                  <div class="swiper-slide"><div class="imgBox">
+                    <a href="#!">
+                    <img src="../img/눈토끼식당차림표.jpg" alt="">
+                </a>
+                </div></div>
+                  <div class="swiper-slide"><div class="imgBox">
+                    <a href="#!">
+                    <img src="../img/어떻게물리학을.jpg" alt="">
+                </a>
+                </div></div>
+                  <div class="swiper-slide"><div class="imgBox">
+                    <a href="#!">
+                    <img src="../img/작별인사.jpg" alt="">
+                    <!-- <div class="imgCover">
+                        <div class="coverText">
+                        <h3>작별인사</h3>
+                        <p>김영하</p>
+                        <p><i class="fa-regular fa-heart"></i><i class="fa-solid fa-arrow-right"></i></p>
+                    </div> -->
+                    </div>
+                </a>
+                </div></div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+              </div>
+
+              
+
+ 
+               
+
+ 
+               
+   
+        </div>
+    </div>
+    </section>
+
+
+    <section class="etc">
+        <div class="container">
+        <div class="ad">
+            <a href="#!">
+                <span>책읽는 창원</span>
+                <h4>2022 창원의 책<br>독후감 전국 공모전</h4>
+                <p>2022.5.2(월) - 2022.9.30(금)</p>
+            </a>
+            <div class="adImg">
+                <img src="../img/눈아이.jpg" alt="">
+            </div>
+        </div>
+        <div class="news">
+        <div class="newsTitle">
+            <h2><span class="currentnewsTitle"><span class="highlight"></span><span class="titleSpan">창원중앙</span></span>도서관 소식</h2>
+            <span><a href="#!">더보기</a></span>
+        </div>
+        <ul class="newsList">
+            <li>
+                <a href="#!">
+                    <p><span class="notice-pre">공지</span>미리내 청소년 독서회 추가회원 모집</p>
+                    <p>2022.04.17</p>
+                </a>
+            </li>
+            <li>
+                <a href="#!">
+                    <p><span class="notice-pre">공지</span>독서아카데미 제1주제 수강생 모집안내</p>
+                    <p>2022.04.17</p>
+                </a>
+            </li>
+            <li>
+                <a href="#!">
+                    <p><span class="notice-pre">공지</span>2022년 4월 추천 영어전자도서</p>
+                    <p>2022.04.16</p>
+                </a>
+            </li>
+            <li>
+                <a href="#!">
+                    <p><span class="notice-pre">공지</span>2022년 북스타트 책꾸러미 배부 안내</p>
+                    <p>2022.04.15</p>
+                </a>
+            </li>
+            <li>
+                <a href="#!">
+                    <p><span class="notice-pre">공지</span>상남도서관 북카페 조성 시민 설문조사 실시</p>
+                    <p>2022.04.7</p>
+                </a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </section>
+
+    <footer class="footer">
+        <h3><a href="#!">대출조회/반납연기</a></h3>
+        <h3><a href="#!">도서예약조회</a></h3>
+        <h3><a href="#!">전자도서관</a></h3>
+        <h3 class="undo" onclick="history.back()"><a href="javascript:void(0)"><i
+                    class="fa-solid fa-rotate-left"></i></a></h3>
+    </footer>
+
+    <!-- ------------------피씨전용-------------------  -->
+
+ 
+
+
+    <footer class="pcFooter">
+        <div class="container">
+            <div class="title">
+                <h2>도서관사업소</h2>
+            </div>
+            <div class="inquire">
+                <h4 class="footerTitle">관련문의</h4>
+                <p>2022-6555</p>
+            </div>
+            <div class="othersite">
+                <h4 class="footerTitle">관련 지역기관 사이트</h4>
+                <ul>
+                    <li><a href="#!">
+                            창원시청
+                        </a></li>
+                    <li><a href="#!">
+                            창원시청
+                        </a></li>
+                    <li><a href="#!">
+                            창원시청
+                        </a></li>
+                    <li><a href="#!">
+                            창원시청
+                        </a></li>
+                </ul>
+            </div>
+            <div class="otherLibSite">
+                <h4 class="footerTitle">관련 도서관 사이트</h4>
+                <ul>
+                    <li><a href="#!">국립중앙도서관</a></li>
+                    <li><a href="#!">국회도서관</a></li>
+                    <li><a href="#!">국립어린이청소년도서관</a></li>
+                    <li><a href="#!">창원도서관</a></li>
+                    <li><a href="#!">한국도서관협회</a></li>
+                    <li><a href="#!">경남대표도서관</a></li>
+                    <li><a href="#!">국립장애인도서관</a></li>
+                </ul>
+            </div>
+
+
+            <div class="siteInfo">
+                <ul class="term">
+                    <li><a href="#!">개인정보처리방침</a></li>
+                    <li><a href="#!">저작권보호정책</a></li>
+                    <li><a href="#!">행정서비스헌장</a></li>
+                    <li><a href="#!">홈페이지오류신고</a></li>
+                    <li><a href="#!">뷰어프로그램</a></li>
+                </ul>
+                <p>Copyrightⓒ Changwon City Library. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="top">
+        <a href="#top">top</a>
+    </div>
+    <script type="text/javascript"
+        src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=9de5de55be98b90a1ae64ecb4676c867"></script>
+    <script src="../js/main.js">
+    </script>
+</body>
+
+</html>

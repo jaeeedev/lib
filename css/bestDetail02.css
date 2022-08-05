@@ -1,0 +1,342 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+/*300 400 700 800*/
+
+:root {
+    --mainblue: #009AFF;
+    --sky: #A7D7F1;
+    --yellow: #FFC831;
+    --green: #23E685;
+    --red: #FF8F8F;
+    --blue: #6DC4F1;
+    --mint: #7ED9D9;
+    --purple: #AF81DC;
+    --btnblue: #0FA0E4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 나눔스퀘어, 'NanumSquare', sans-serif;
+    transform: rotate(0.04deg);
+    color: #222;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* 헤더 */
+
+.innerHeader {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 1px 9px 1px rgba(0, 0, 0, 0.15);
+}
+
+.logo h1 {
+    width: 140px;
+}
+
+.logo h2 a {
+    display: block;
+    width: 100%;
+}
+
+.logo a img {
+    display: block;
+    width: 100%;
+}
+
+/*  사이드내브   */
+
+.sideNavBtn:checked~.sideNav {
+    left: 0;
+}
+
+.sideNav {
+    z-index: 1111;
+    position: absolute;
+    left: -80%;
+    width: 80%;
+    height: calc(100% - 60px);
+    /* 헤더 높이 아래부터 사이드내브가 시작되어
+     푸터가 들뜨는 문제발생 -> 헤더 높이를 뺴줬음 */
+    background: var(--mainblue);
+    overflow: hidden;
+    transition: all 0.4s;
+}
+
+.sideNav .sideNavLabel {
+    position: absolute;
+    width: 100%;
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
+    left: 85%;
+}
+
+.sideNav>ul {
+    margin-top: 50px;
+}
+
+.sideNavBtn {
+    display: none;
+}
+
+.sideNav>ul>li {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    font-weight: 700;
+    color: white;
+}
+
+.sideNav a {
+    color: white;
+    display: block;
+}
+
+.sideNav>label>i {
+    margin-right: 20px;
+}
+
+/*  사이드내브안의리스트~~~~~!!!!!!!  */
+
+.sideNav input[type="checkbox"] {
+    display: none;
+}
+
+.sideNav .hideList {
+    background: white;
+    display: none;
+    color: #222;
+    line-height: 1.6;
+}
+
+.sideNav .hideList a {
+    color: #222;
+}
+
+.introLibOpen:checked~.hideList01 {
+    display: block;
+}
+
+.findBookOpen:checked~.hideList02 {
+    display: block;
+}
+
+.readingChangwon:checked~.hideList03 {
+    display: block;
+}
+
+.myPage:checked~.hideList04 {
+    display: block;
+}
+
+.useHomepage:checked~.hideList05 {
+    display: block;
+}
+
+.libSchedule:checked~.hideList06 {
+    display: block;
+}
+
+
+/* 책정보 */
+
+.navi {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.bookInfo {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.bookInfo .bookPic {
+    width: 120px;
+}
+
+.bookPic img {
+    width: 100%;
+    display: block;
+}
+
+
+.bookText h3 {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.bookText>div {
+    display: flex;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.bookText>div>span {
+    min-width: 70px;
+    font-weight: 700;
+}
+
+/* 연관 영상 */
+.video h2 {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.videoBox {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.20%;
+}
+
+.videoBox iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 소장 정보 */
+.reserveInfo {
+    background: #f3f3f3;
+    text-align: center;
+}
+
+.reserveInfo h2 {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.infoBox .infoHeader,
+.infoDesc {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.infoBoxWrapper {
+    box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.15);
+    border-radius: 7px;
+    overflow: hidden;
+    background: white;
+    margin-bottom: 20px;
+}
+
+.infoBox .infoHeader {
+    background: var(--sky);
+    padding: 5px 0;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.infoBox .infoDesc {
+    font-size: 14px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.nowOut {
+    color: var(--mainblue);
+}
+
+.btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.btns button:active {
+    background: var(--sky);
+    color: white;
+}
+
+.btns .addCartBtn,
+.reserveBtn {
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: none;
+    background: white;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+    font-size: 13px;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.btns .reserveBtn.disabled {
+    box-shadow: none;
+    background: #ccc;
+    color: #999;
+}
+
+
+.reserveInfo .list {
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: none;
+    background: white;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+    font-size: 13px;
+    font-weight: 800;
+    color: #222;
+}
+
+/* 푸터 */
+
+.footer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+    transform: rotate(-0.03deg);
+}
+
+.footer a {
+    font-weight: 800;
+    font-size: 15px;
+}
+
+@media all and (min-width:375px) {
+    .footer a {
+        font-size: 15px;
+    }
+
+    .bookText>div {
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도서관사업소</title>
+    <script src="https://kit.fontawesome.com/7cde33c3cd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/greeting.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="innerHeader">
+            <div class="logo">
+                <h1><a href="../subPages/main.html"><img src="../img/logo_top.png" alt="상단로고"></a></h1>
+            </div>
+            <label for="sideNavBtn" class="sideNavLabel"><i class="fa-solid fa-bars"></i></label>
+        </div>
+    </header>
+    <input type="checkbox" id="sideNavBtn" class="sideNavBtn">
+    <nav class="sideNav">
+        <label for="sideNavBtn" class="sideNavLabel"><i class="fa-solid fa-xmark"></i></label>
+        <ul>
+            <li><a href="../subPages/login.html">로그인</a></li>
+            <li><label for="introLibOpen">도서관소개 <i class="fa-solid fa-chevron-down"></i></label>
+            </li>
+            <input type="checkbox" id="introLibOpen" class="introLibOpen">
+            <li class="hideList hideList01">
+                <ul>
+                    <li><a href="./greeting.html">인사말</a></li>
+                    <li><a href="./history.html">연혁</a></li>
+                    <li><a href="https://lib.changwon.go.kr/cl/about/libps.html">도서관현황</a></li>
+                    <li><a href="">도서관 이용예절</a></li>
+                    <li><a href="">의견수렴</a></li>
+                </ul>
+            </li>
+            <li><label for="findBookOpen">자료찾기 <i class="fa-solid fa-chevron-down"></i></label>
+            </li>
+            <input type="checkbox" id="findBookOpen" class="findBookOpen">
+            <li class="hideList hideList02">
+                <ul>
+                    <li><a href="../subPages/best.html">도서대출베스트</a></li>
+                    <li>자료검색/예약</li>
+                    <li>신착도서</li>
+                    <li>권장도서</li>
+                </ul>
+            </li>
+            <!-- <li><a href="#!">책읽는창원 <label for="readingChangwon"><i class="fa-solid fa-chevron-down"></i></label></a>
+                </li>
+                <input type="checkbox" id="readingChangwon" class="readingChangwon">
+                <li class="hideList hideList03">
+                    <ul>
+                        <li><a href="#!">책읽는 창원소식</a></li>
+                        <li><a href="#!">창원의 책</a></li>
+                        <li><a href="#!">독서릴레이</a></li>
+                        <li><a href="#!">독후감전국공모전</a></li>
+                        <li><a href="#!">책읽는 창원 갤러리</a></li>
+                    </ul>
+                </li> -->
+            <li><label for="myPage">마이페이지 <i class="fa-solid fa-chevron-down"></i></label></li>
+            <input type="checkbox" id="myPage" class="myPage">
+            <li class="hideList hideList04">
+                <ul>
+                    <li><a href="../subPages/login.html">로그인</a></li>
+                    <li><a href="#!">회원가입</a></li>
+                    <li><a href="#!">아이디찾기</a></li>
+                    <li><a href="#!">비밀번호찾기</a></li>
+                    <li><a href="#!">도서대출내역조회</a></li>
+                    <!-- <li><a href="#!">희망도서신청</a></li> -->
+                    <li><a href="#!">도서예약조회</a></li>
+                    <!-- <li><a href="#!">개인정보 재동의</a></li> -->
+                </ul>
+            </li>
+            <!-- <li><a href="#!">홈페이지 이용안내 <label for="useHomepage"><i class="fa-solid fa-chevron-down"></i></label></a>
+                </li>
+                <input type="checkbox" id="useHomepage" class="useHomepage">
+                <li class="hideList hideList05">
+                    <ul>
+                        <li><a href="#!">홈페이지이용안내</a></li>
+                        <li><a href="#!">홈페이지오류신고</a></li>
+                        <li><a href="#!">개인정보처리방침</a></li>
+                        <li><a href="#!">행정서비스헌장</a></li>
+                        <li><a href="#!">저작권보호정책</a></li>
+                        <li><a href="#!">뷰어프로그램</a></li>
+                        <li><a href="#!">사이트맵</a></li>
+                    </ul>
+                </li> -->
+            <li><label for="libSchedule">도서관 일정 <i class="fa-solid fa-chevron-down"></i></label></li>
+            <input type="checkbox" id="libSchedule" class="libSchedule">
+            <li class="hideList hideList06">
+                <ul>
+                    <li><a href="#!">창원중앙도서관</a></li>
+                    <li><a href="#!">성산도서관</a></li>
+                    <li><a href="../subPages/schedule.html">상남도서관</a></li>
+                    <li><a href="#!">최윤덕도서관</a></li>
+                    <li><a href="#!">고향의봄도서관</a></li>
+                    <li><a href="#!">명곡도서관</a></li>
+                    <li><a href="#!">마산합포도서관</a></li>
+                    <li><a href="#!">마산회원도서관</a></li>
+                    <li><a href="#!">내서도서관</a></li>
+                    <li><a href="#!">중리초등도서관</a></li>
+                    <li><a href="#!">진해도서관</a></li>
+                    <li><a href="#!">동부도서관</a></li>
+                </ul>
+            </li>
+            <!-- <li><a href="#!">작은도서관</a></li> -->
+
+        </ul>
+    </nav>
+
+    <nav class="sideIntroNavi">
+        <ul>
+            <li class="currentLocation"><a href="../fakepages/greeting.html">인사말</a></li>
+            <li><a href="../fakepages/history.html">연혁</a></li>
+            <li><a href="#!">도서관 현황</a></li>
+            <li><a href="#!">도서관 이용예절</a></li>
+            <li><a href="#!">의견수렴</a></li>
+            <li><a href="#!"></a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="greeting">
+            <div class="pageNavi">
+                <h2>도서관 소개 > 인사말</h2>
+            </div>
+            <p class="bold01">안녕하십니까?</p>
+            <p class="bold02">창원시도서관사업소 홈페이지를 방문하여 주신 여러분을 진심으로 환영합니다.</p>
+            <p class="letter">
+                창원시도서관사업소는 2010년 통합 창원시 출범으로 신설되어
+                관내 11개 공공도서관을 기반으로 시민의 삶의 질 향상을 위한 풍부하고
+                다양한 독서인프라 구축과 정보이용서비스 제공은 물론
+                문화공간으로서 역할을 다하기 위해 최선을 다하고 있습니다.
+                <br>
+                <br>
+                맞춤형 지식정보 제공과 차별화된 프로그램 운영으로
+                시민의 정보·문화 욕구에 부응할 수 있도록 함은 물론
+                지역별 특성을 살린 특화도서관 운영으로
+                시민이 즐겨찾는 도서관이 되도록 노력하겠습니다.
+                <br>
+                <br>
+                또한 다양한 독서장려 시책, 인문학강좌 및 문화교실 운영으로
+                책을 통해 공감, 소통하는 시민독서문화를 조성하여
+                <br>
+                <br>
+                <span class="color">책으로 성장하며 도전하는 창원<br>
+                    책으로 따뜻함을 나누는 창원<br>
+                    책으로 풍요롭고 지혜로운 창원<br>
+                    책으로 꿈꾸며 빛나는 창원<br>
+                    책으로 소통하며 하나 되는 창원<br>
+                    책으로 행복한 도시 ‘책읽는 창원’</span> 이 될 수 있도록<br>
+                최선의 노력을 다하겠습니다.
+                <br>
+                <br>
+                미래를 디자인하고 모두가 행복한 사람중심의 창원시도서관사업소로 여러분을 초대합니다.
+                <br>
+                <br>
+                감사합니다.
+            </p>
+            <div class="name"><span class="who">창원시도서관사업소장</span> 안 익 태</div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <h3><a href="#!">대출조회/반납연기</a></h3>
+        <h3><a href="#!">도서예약조회</a></h3>
+        <h3><a href="#!">전자도서관</a></h3>
+        <h3 class="undo" onclick="history.back()"><a href="javascript:void(0)"><i
+                    class="fa-solid fa-rotate-left"></i></a></h3>
+    </footer>
+
+</body>
+
+</html>

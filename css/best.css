@@ -1,0 +1,523 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+/*300 400 700 800*/
+
+:root {
+    --mainblue: #009AFF;
+    --sky: #A7D7F1;
+    --yellow: #FFC831;
+    --green: #23E685;
+    --red: #FF8F8F;
+    --blue: #6DC4F1;
+    --mint: #7ED9D9;
+    --purple: #AF81DC;
+    --btnblue: #0FA0E4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 나눔스퀘어, 'NanumSquare', sans-serif;
+    overflow-x: hidden;
+    color: #222;
+    transform: rotate(0.01deg);
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    padding: 20px;
+}
+
+
+/* 헤더 */
+
+
+
+.innerHeader {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 1px 9px 1px rgba(0, 0, 0, 0.15);
+}
+
+.logo h1 {
+    width: 140px;
+}
+
+.logo h2 a {
+    display: block;
+    width: 100%;
+}
+
+.logo a img {
+    display: block;
+    width: 100%;
+}
+
+/*  사이드내브   */
+
+.sideNavBtn:checked~.sideNav {
+    left: 0;
+}
+
+.sideNav {
+    z-index: 1111;
+    position: absolute;
+    left: -80%;
+    width: 80%;
+    height: calc(100% - 60px);
+    /* 헤더 높이 아래부터 사이드내브가 시작되어
+     푸터가 들뜨는 문제발생 -> 헤더 높이를 뺴줬음 */
+    background: var(--mainblue);
+    overflow: hidden;
+    transition: all 0.4s;
+}
+
+.sideNav .sideNavLabel {
+    position: absolute;
+    width: 100%;
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
+    left: 85%;
+}
+
+.sideNav>ul {
+    margin-top: 50px;
+}
+
+.sideNavBtn {
+    display: none;
+}
+
+.sideNav>ul>li {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    font-weight: 700;
+    color: white;
+}
+
+.sideNav a {
+    color: white;
+    display: block;
+}
+
+.sideNav>label>i {
+    margin-right: 20px;
+}
+
+
+/*  사이드내브안의리스트~~~~~!!!!!!!  */
+
+.sideNav input[type="checkbox"] {
+    display: none;
+}
+
+.sideNav .hideList {
+    background: white;
+    display: none;
+    color: #222;
+    line-height: 1.6;
+}
+
+.sideNav .hideList a {
+    color: #222;
+}
+
+.introLibOpen:checked~.hideList01 {
+    display: block;
+}
+
+.findBookOpen:checked~.hideList02 {
+    display: block;
+}
+
+.readingChangwon:checked~.hideList03 {
+    display: block;
+}
+
+.myPage:checked~.hideList04 {
+    display: block;
+}
+
+.useHomepage:checked~.hideList05 {
+    display: block;
+}
+
+.libSchedule:checked~.hideList06 {
+    display: block;
+}
+
+
+/* 필터 */
+
+.pageNavi h2 {
+    font-size: 16px;
+    font-weight: 800;
+    transform: rotate(-0.04deg);
+    margin-bottom: 10px;
+}
+
+.filter {
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    transform: rotate(-0.06deg);
+}
+
+.libFilter {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.allBooks {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.onlyHere {
+    background: var(--sky);
+    color: white;
+    border-radius: 5px;
+    flex: 1.5;
+    padding: 6px 0;
+    text-align: center;
+}
+
+
+.dateFilter {
+    margin-bottom: 5px;
+}
+
+.dateFilter form {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.dateFilter input {
+    padding: 1px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 3px 5px;
+    width: 35%;
+}
+
+
+.dateFilter button {
+    font-size: 12px;
+    font-weight: 800;
+    background: var(--mainblue);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 10px;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.otherFilters .otherTop {
+    display: flex;
+}
+
+.genreSelect {
+    width: 40%;
+}
+
+.otherFilters select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+.libSelect {
+    flex: 1;
+}
+
+.roomSelect {
+    flex: 1.5;
+    margin-left: 10px;
+}
+
+
+
+/* 5위 이상  */
+
+.top5 {
+    margin-bottom: 30px;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    /* 익스, 엣지 */
+    scrollbar-width: none;
+    /* 파폭 */
+}
+
+.top5 h2 {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    transform: rotate(-0.04deg);
+}
+
+.top5::-webkit-scrollbar {
+    display: none;
+    /* 크롬 사파리 오페라 */
+}
+
+.top5 ul {
+    width: 200%;
+    display: flex;
+    gap: 20px;
+}
+
+.top5 ul li {
+    width: 100%;
+    flex: 1;
+    transform: rotate(0.04deg);
+}
+
+.top5 li h3 {
+    width: 150px;
+    font-size: 15px;
+    font-weight: 800;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 3px;
+}
+
+.top5 li p {
+    width: 150px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #666;
+}
+
+.topPic {
+    position: relative;
+    width: 150px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.topPic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.topPic span {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    box-shadow: 0 3px 7px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* 5위 아래 리스트, 언더5 */
+
+.underList li {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.underPic img {
+    width: 130px;
+    height: 172px;
+    object-fit: cover;
+}
+
+.underText {
+    width: 60%;
+    font-weight: 700;
+    transform: rotate(0.04deg);
+}
+
+.underText h3 {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    font-weight: 800;
+    transform: rotate(-0.06deg);
+    margin-bottom: 5px;
+}
+
+.underText p {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.underBtns {
+    margin-top: 5px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.underBtns button:active {
+    background: var(--sky);
+    color: white;
+}
+
+.underBtns button:active a {
+    color: white;
+
+}
+
+.underBtns button {
+    border: none;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.underBtns button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.underBtns .goToReserve {
+    width: 40%;
+}
+
+.underBtns .goToDetail {
+    width: 40%;
+}
+
+.underBtns button.disabled {
+    background: #ccc;
+    color: #999;
+}
+
+.under5 .writer::before {
+    content: "· 저자 : "
+}
+
+.under5 .company::before {
+    content: "· 발행처 : "
+}
+
+.under5 .wroteYear::before {
+    content: "· 발행년 : "
+}
+
+.under5 .availLib::before {
+    content: "· 소장기관 : "
+}
+
+.underList .underPic {
+    position: relative;
+}
+
+.underList span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -12.5px;
+    left: -12.5px;
+    background: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.25);
+    font-weight: 700;
+    transform: rotate(-0.04deg);
+}
+
+
+/* 푸터 */
+
+.footer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+    transform: rotate(-0.03deg);
+}
+
+.footer a {
+    font-weight: 800;
+    font-size: 15px;
+}
+
+
+.etc {
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    right: 0;
+    bottom: 70px;
+}
+
+.etc i {
+    background: var(--mainblue);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+}
+
+.etc .toCartList {
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 10px;
+    background: white;
+    color: var(--mainblue);
+    padding: 10px;
+    transform: rotate(-0.06deg);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}

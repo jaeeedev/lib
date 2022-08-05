@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도서관사업소</title>
+    <script src="https://kit.fontawesome.com/7cde33c3cd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/bestDetail.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="innerHeader">
+            <div class="logo">
+                <h1><a href="main.html"><img src="../img/logo_top.png" alt="상단로고"></a></h1>
+            </div>
+            <label for="sideNavBtn" class="sideNavLabel"><i class="fa-solid fa-bars"></i></label>
+        </div>
+    </header>
+    <input type="checkbox" id="sideNavBtn" class="sideNavBtn">
+    <nav class="sideNav">
+        <label for="sideNavBtn" class="sideNavLabel"><i class="fa-solid fa-xmark"></i></label>
+        <ul>
+            <li><a href="login.html">로그인</a></li>
+            <li><label for="introLibOpen">도서관소개 <i class="fa-solid fa-chevron-down"></i></label>
+            </li>
+            <input type="checkbox" id="introLibOpen" class="introLibOpen">
+            <li class="hideList hideList01">
+                <ul>
+                    <li><a href="../fakepages/greeting.html">인사말</a></li>
+                    <li><a href="../fakepages/history.html">연혁</a></li>
+                    <li><a href="https://lib.changwon.go.kr/cl/about/libps.html">도서관현황</a></li>
+                    <li><a href="">도서관 이용예절</a></li>
+                    <li><a href="">의견수렴</a></li>
+                </ul>
+            </li>
+            <li><label for="findBookOpen">자료찾기 <i class="fa-solid fa-chevron-down"></i></label>
+            </li>
+            <input type="checkbox" id="findBookOpen" class="findBookOpen">
+            <li class="hideList hideList02">
+                <ul>
+                    <li><a href="./best.html">도서대출베스트</a></li>
+                    <li>자료검색/예약</li>
+                    <li>신착도서</li>
+                    <li>권장도서</li>
+                </ul>
+            </li>
+            <!-- <li><a href="#!">책읽는창원 <label for="readingChangwon"><i class="fa-solid fa-chevron-down"></i></label></a>
+            </li>
+            <input type="checkbox" id="readingChangwon" class="readingChangwon">
+            <li class="hideList hideList03">
+                <ul>
+                    <li><a href="#!">책읽는 창원소식</a></li>
+                    <li><a href="#!">창원의 책</a></li>
+                    <li><a href="#!">독서릴레이</a></li>
+                    <li><a href="#!">독후감전국공모전</a></li>
+                    <li><a href="#!">책읽는 창원 갤러리</a></li>
+                </ul>
+            </li> -->
+            <li><label for="myPage">마이페이지 <i class="fa-solid fa-chevron-down"></i></label></li>
+            <input type="checkbox" id="myPage" class="myPage">
+            <li class="hideList hideList04">
+                <ul>
+                    <li><a href="./login.html">로그인</a></li>
+                    <li><a href="#!">회원가입</a></li>
+                    <li><a href="#!">아이디찾기</a></li>
+                    <li><a href="#!">비밀번호찾기</a></li>
+                    <li><a href="#!">도서대출내역조회</a></li>
+                    <!-- <li><a href="#!">희망도서신청</a></li> -->
+                    <li><a href="#!">도서예약조회</a></li>
+                    <!-- <li><a href="#!">개인정보 재동의</a></li> -->
+                </ul>
+            </li>
+            <!-- <li><a href="#!">홈페이지 이용안내 <label for="useHomepage"><i class="fa-solid fa-chevron-down"></i></label></a>
+            </li>
+            <input type="checkbox" id="useHomepage" class="useHomepage">
+            <li class="hideList hideList05">
+                <ul>
+                    <li><a href="#!">홈페이지이용안내</a></li>
+                    <li><a href="#!">홈페이지오류신고</a></li>
+                    <li><a href="#!">개인정보처리방침</a></li>
+                    <li><a href="#!">행정서비스헌장</a></li>
+                    <li><a href="#!">저작권보호정책</a></li>
+                    <li><a href="#!">뷰어프로그램</a></li>
+                    <li><a href="#!">사이트맵</a></li>
+                </ul>
+            </li> -->
+            <li><label for="libSchedule">도서관 일정 <i class="fa-solid fa-chevron-down"></i></label></li>
+            <input type="checkbox" id="libSchedule" class="libSchedule">
+            <li class="hideList hideList06">
+                <ul>
+                    <li><a href="#!">창원중앙도서관</a></li>
+                    <li><a href="#!">성산도서관</a></li>
+                    <li><a href="./schedule.html">상남도서관</a></li>
+                    <li><a href="#!">최윤덕도서관</a></li>
+                    <li><a href="#!">고향의봄도서관</a></li>
+                    <li><a href="#!">명곡도서관</a></li>
+                    <li><a href="#!">마산합포도서관</a></li>
+                    <li><a href="#!">마산회원도서관</a></li>
+                    <li><a href="#!">내서도서관</a></li>
+                    <li><a href="#!">중리초등도서관</a></li>
+                    <li><a href="#!">진해도서관</a></li>
+                    <li><a href="#!">동부도서관</a></li>
+                </ul>
+            </li>
+            <!-- <li><a href="#!">작은도서관</a></li> -->
+
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="bestDetail">
+            <div class="navi">
+                <a href="#!">자료검색 > </a>
+                <a href="#!">상세페이지</a>
+            </div>
+            <div class="bookInfo">
+                <div class="bookPic">
+                    <img src="https://image.yes24.com/goods/59382261/XL" alt="파친코 표지">
+                </div>
+                <div class="bookText">
+                    <h3>파친코 1 (이민진 장편소설)</h3>
+                    <!-- <h4><span>저자사항</span>이민진</h4>
+                    <h4><span>발행사항</span>2018 2책; 21cm</h4>
+                    <h4><span>형태사항</span>미국 현대 소설</h4>
+                    <h4><span>ISBN</span>7481</h4>
+                    <h4><span>소장기관</span>꿈꾸는산호작은도서관</h4> -->
+
+                    <div class="writerInfo">
+                        <span>저자사항</span>
+                        <h4>이민진</h4>
+                    </div>
+                    <div class="publishInfo">
+                        <span>발행사항</span>
+                        <h4>2018 2책; 21cm</h4>
+                    </div>
+                    <div class="shapeInfo">
+                        <span>형태사항</span>
+                        <h4>미국 현대 소설</h4>
+                    </div>
+                    <div class="isbnInfo">
+                        <span>ISBN</span>
+                        <h4>7481</h4>
+                    </div>
+                    <div class="libInfo">
+                        <span>소장기관</span>
+                        <h4>상남도서관</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="video">
+            <h2>연관 영상</h2>
+            <div class="videoBox">
+                <iframe width="448" height="252" src="https://www.youtube.com/embed/tNDLWkK9Il0"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+    </div>
+
+    <section class="reserveInfo">
+        <div class="container">
+            <h2>소장 정보</h2>
+            <div class="infoBoxWrapper">
+                <div class="infoBox">
+                    <div class="infoHeader">
+                        <h4>구분</h4>
+                        <h4>자료실</h4>
+                    </div>
+                    <div class="infoDesc">
+                        <p>TZE000005297</p>
+                        <p>꿈산일반843.6<br>v1-이38파</p>
+                    </div>
+                </div>
+                <div class="infoBox">
+                    <div class="infoHeader">
+                        <h4>자료상태</h4>
+                        <h4>반납예정일</h4>
+                    </div>
+                    <div class="infoDesc">
+                        <p class="nowOut">대출중(예약 1명)</p>
+                        <p>2022-04-29</p>
+                    </div>
+                </div>
+                <div class="infoBox">
+                    <div class="infoHeader">
+                        <h4>예약</h4>
+                        <h4>타관대출</h4>
+                    </div>
+                    <div class="infoDesc">
+                        <p>예약불가</p>
+                        <p>신청불가</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btns">
+                <button type="button" class="addCartBtn">관심도서담기</button>
+                <button type="button" class="reserveBtn disabled">예약하기</button>
+            </div>
+            <button type="button" class="list">목록</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h3><a href="#!">대출조회/반납연기</a></h3>
+        <h3><a href="#!">도서예약조회</a></h3>
+        <h3><a href="#!">전자도서관</a></h3>
+        <h3 class="undo" onclick="history.back()"><a href="javascript:void(0)"><i
+                    class="fa-solid fa-rotate-left"></i></a></h3>
+    </footer>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
